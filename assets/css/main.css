@@ -1,10 +1,10 @@
 @font-face {
     font-family: "Raleway";
-    src: url("assets/fonts/Raleway-Regular.ttf");
+    src: url("../fonts/Raleway-Regular.ttf") format("truetype");
 }
 @font-face {
-    font-family: "Raleway-Medium";
-    src: url("assets/fonts/Raleway-Medium.ttf");
+    font-family: "Raleway-ExtraBold";
+    src: url("../fonts/Raleway-ExtraBold.ttf") format("truetype");
 }
 
 html {
@@ -12,9 +12,7 @@ html {
 }
 
 body {
-    font-family: "Raleway" !important;
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Raleway-ExtraBold" !important;
     color: #5d657b;
     overflow-x: hidden;
     background: #f1f5f9;
@@ -318,7 +316,7 @@ p {
 }
 
 .content .headercard .count {
-    font-family: "Raleway-Medium", sans-serif;
+    font-family: "Raleway", sans-serif;
     margin-top: 6px;
     margin-bottom: 8px;
     font-size: 40px;
@@ -335,7 +333,7 @@ p {
 }
 
 .content .headercard .percent {
-    font-family: "Raleway-Medium", sans-serif;
+    font-family: "Raleway", sans-serif;
     margin-left: 6px;
     font-size: 14px;
     font-weight: 600;
@@ -454,7 +452,7 @@ p {
 }
 
 .sankey_chart .sankey_node .label p {
-    font-family: "Raleway-Medium", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 13px;
     line-height: 15px;
@@ -498,7 +496,7 @@ p {
 }
 
 .sankey_chart .sankey_node .exit_node span {
-    font-family: "Raleway-Medium", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 14px;
     line-height: 15px;
     font-weight: 500;
