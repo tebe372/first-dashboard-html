@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Highcharts</title>
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
+
+        <link href="assets/fonts/Raleway-ExtraBold.ttf" rel="stylesheet" />
+        <link href="assets/fonts/Raleway-Medium.ttf" rel="stylesheet" />
+        <link href="assets/fonts/Raleway.ttf" rel="stylesheet" />
+        <link href="assets/fonts/Raleway-SemiBold.ttf" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- ======== sidebar-nav start =========== -->
+        <aside class="sidebar-nav-wrapper">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="#0">
+                            <span class="icon active">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <g>
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
+                                        />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <span class="icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <g>
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M4 16h16V5H4v11zm9 2v2h4v2H7v-2h4v-2H2.992A.998.998 0 0 1 2 16.993V4.007C2 3.451 2.455 3 2.992 3h18.016c.548 0 .992.449.992 1.007v12.986c0 .556-.455 1.007-.992 1.007H13z"
+                                        />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <span class="icon">
+                                <svg
+                                    viewBox="0 0 1024 1024"
+                                    version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M85.333333 554.666667h256v341.333333H85.333333v-341.333333z m597.333334-213.333334h256v554.666667h-256V341.333333zM384 128h256v768H384V128zM170.666667 640v170.666667h85.333333v-170.666667H170.666667z m298.666666-426.666667v597.333334h85.333334V213.333333h-85.333334z m298.666667 213.333334v384h85.333333v-384h-85.333333z"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <span class="icon">
+                                <svg
+                                    viewBox="0 0 1024 1024"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z"
+                                    />
+                                    <path
+                                        d="M305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6c-3.1-3.1-8.2-3.1-11.3 0l-230 229.9L461.4 404c-3.1-3.1-8.2-3.1-11.3 0L266.3 586.7c-3.1 3.1-3.1 8.2 0 11.3l39.5 39.7z"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <span class="icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <g>
+                                        <path fill="none" d="M0 0H24V24H0z" />
+                                        <path
+                                            d="M21 3c.552 0 1 .448 1 1v14c0 .552-.448 1-1 1H6.455L2 22.5V4c0-.552.448-1 1-1h18zm-1 2H4v13.385L5.763 17H20V5zm-7 2v8h-2V7h2zm4 2v6h-2V9h2zm-8 2v4H7v-4h2z"
+                                        />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <span class="icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <g>
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M3.34 17a10.018 10.018 0 0 1-.978-2.326 3 3 0 0 0 .002-5.347A9.99 9.99 0 0 1 4.865 4.99a3 3 0 0 0 4.631-2.674 9.99 9.99 0 0 1 5.007.002 3 3 0 0 0 4.632 2.672c.579.59 1.093 1.261 1.525 2.01.433.749.757 1.53.978 2.326a3 3 0 0 0-.002 5.347 9.99 9.99 0 0 1-2.501 4.337 3 3 0 0 0-4.631 2.674 9.99 9.99 0 0 1-5.007-.002 3 3 0 0 0-4.632-2.672A10.018 10.018 0 0 1 3.34 17zm5.66.196a4.993 4.993 0 0 1 2.25 2.77c.499.047 1 .048 1.499.001A4.993 4.993 0 0 1 15 17.197a4.993 4.993 0 0 1 3.525-.565c.29-.408.54-.843.748-1.298A4.993 4.993 0 0 1 18 12c0-1.26.47-2.437 1.273-3.334a8.126 8.126 0 0 0-.75-1.298A4.993 4.993 0 0 1 15 6.804a4.993 4.993 0 0 1-2.25-2.77c-.499-.047-1-.048-1.499-.001A4.993 4.993 0 0 1 9 6.803a4.993 4.993 0 0 1-3.525.565 7.99 7.99 0 0 0-.748 1.298A4.993 4.993 0 0 1 6 12c0 1.26-.47 2.437-1.273 3.334a8.126 8.126 0 0 0 .75 1.298A4.993 4.993 0 0 1 9 17.196zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                                        />
+                                    </g>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- ======== sidebar-nav end =========== -->
+
+        <!-- ======== main-wrapper start =========== -->
+        <div class="main-wrapper">
+            <!-- ========== header start ========== -->
+            <div class="header">
+                <span class="title">Dashboard</span>
+            </div>
+            <!-- ========== header end ========== -->
+
+            <!-- ========== content start ========== -->
+            <div class="content">
+                <div>
+                    <!-- ========== header card start ========== -->
+                    <div class="row">
+                        <div
+                            class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                        >
+                            <div
+                                class="headercard"
+                                style="background-color: #097092"
+                            >
+                                <div class="outer_circle"></div>
+                                <div class="inner_circle"></div>
+                                <div class="gr_blue"></div>
+                                <div
+                                    class="icon d-flex justify-content-center align-items-center"
+                                >
+                                    <img
+                                        src="assets/images/terminal_box_line.svg"
+                                        alt="Icon"
+                                    />
+                                </div>
+                                <span class="title"
+                                    >COMPLETED DEPOSIT APPLICATIONS</span
+                                >
+                                <span class="count">4 936</span>
+                                <div class="d-flex flex-row align-items-center">
+                                    <div
+                                        class="arrow d-flex justify-content-center align-items-center rounded-circle"
+                                    >
+                                        <img
+                                            src="assets/images/arrow_up_line.svg"
+                                        />
+                                    </div>
+                                    <span class="percent"> +1% </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                        >
+                            <div
+                                class="headercard"
+                                style="background-color: #05a47b"
+                            >
+                                <div class="outer_circle"></div>
+                                <div class="inner_circle"></div>
+                                <div class="gr_green"></div>
+                                <div
+                                    class="icon d-flex justify-content-center align-items-center"
+                                >
+                                    <img
+                                        src="assets/images/money_doller_circle_line.svg"
+                                        alt="Icon"
+                                    />
+                                </div>
+                                <span class="title"
+                                    >COMPLETED DEPOSIT APPLICATIONS</span
+                                >
+                                <span class="count">3 110</span>
+                                <div class="d-flex flex-row align-items-center">
+                                    <div
+                                        class="arrow d-flex justify-content-center align-items-center rounded-circle"
+                                    >
+                                        <img
+                                            src="assets/images/arrow_up_line.svg"
+                                        />
+                                    </div>
+                                    <span class="percent"> +25% </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                        >
+                            <div
+                                class="headercard"
+                                style="background-color: #e5aa21"
+                            >
+                                <div class="outer_circle"></div>
+                                <div class="inner_circle"></div>
+                                <div class="gr_yellow"></div>
+                                <div
+                                    class="icon d-flex justify-content-center align-items-center"
+                                >
+                                    <img
+                                        src="assets/images/coins_line.svg"
+                                        alt="Icon"
+                                    />
+                                </div>
+                                <span class="title">FUNDED APPLICATIONS</span>
+                                <span class="count">$987 283</span>
+                                <div class="d-flex flex-row align-items-center">
+                                    <div
+                                        class="arrow d-flex justify-content-center align-items-center rounded-circle"
+                                    >
+                                        <img
+                                            src="assets/images/arrow_up_line.svg"
+                                        />
+                                    </div>
+                                    <span class="percent"> +1% </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                        >
+                            <div
+                                class="headercard"
+                                style="background-color: #c71842"
+                            >
+                                <div class="outer_circle"></div>
+                                <div class="inner_circle"></div>
+                                <div class="gr_red"></div>
+                                <div
+                                    class="icon d-flex justify-content-center align-items-center"
+                                >
+                                    <img
+                                        src="assets/images/bank_line.svg"
+                                        alt="Icon"
+                                    />
+                                </div>
+                                <span class="title">NEW DEPOSITS</span>
+                                <span class="count">$13 821 962</span>
+                                <div class="d-flex flex-row align-items-center">
+                                    <div
+                                        class="arrow d-flex justify-content-center align-items-center rounded-circle"
+                                    >
+                                        <img
+                                            src="assets/images/arrow_down_line.svg"
+                                        />
+                                    </div>
+                                    <span class="percent"> +40% </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========== header card end ========== -->
+
+                    <!-- ========== sankey chart begin ========== -->
+                    <div class="sankey_chart d-flex flex-row">
+                        <div class="d-flex flex-col w-100 h-100">
+                            <div
+                                class="d-flex w-100 justify-content-center align-items-top"
+                            >
+                                <div
+                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
+                                    style="height: 228px"
+                                >
+                                    <div class="label">
+                                        <span class="text-center">
+                                            SITE IMPRESSIONS
+                                        </span>
+                                        <p class="text-center">4,991,707</p>
+                                    </div>
+                                    <div class="connect_down">
+                                        <img
+                                            src="assets/images/connect_down1.svg"
+                                            alt="Sankey Chart Node Connection"
+                                        />
+                                        <div class="exit_node">
+                                            <span>Exit</span>
+                                            <span>456</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="connect_up">
+                                    <img
+                                        src="assets/images/connect_up1.svg"
+                                        alt="Sankey Chart Node Connection"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-col w-100 h-100">
+                            <div
+                                class="d-flex w-100 justify-content-center align-items-top"
+                            >
+                                <div
+                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
+                                    style="height: 176px"
+                                >
+                                    <div class="label">
+                                        <span class="text-center">
+                                            SITE VISITS
+                                        </span>
+                                        <p class="text-center">1,789,744</p>
+                                    </div>
+                                    <div class="connect_down">
+                                        <img
+                                            src="assets/images/connect_down2.svg"
+                                            alt="Sankey Chart Node Connection"
+                                        />
+                                        <div class="exit_node">
+                                            <span>Exit</span>
+                                            <span>560</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="connect_up">
+                                    <img
+                                        src="assets/images/connect_up2.svg"
+                                        alt="Sankey Chart Node Connection"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-col w-100 h-100">
+                            <div
+                                class="d-flex w-100 justify-content-center align-items-top"
+                            >
+                                <div
+                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
+                                    style="height: 124px"
+                                >
+                                    <div class="label">
+                                        <span class="text-center">
+                                            DEPOSIT PRODUCT VIEWS
+                                        </span>
+                                        <p class="text-center">535,419</p>
+                                    </div>
+                                    <div class="connect_down">
+                                        <img
+                                            src="assets/images/connect_down3.svg"
+                                            alt="Sankey Chart Node Connection"
+                                        />
+                                        <div class="exit_node">
+                                            <span>Exit</span>
+                                            <span>338</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="connect_up">
+                                    <img
+                                        src="assets/images/connect_up3.svg"
+                                        alt="Sankey Chart Node Connection"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-col w-100 h-100">
+                            <div
+                                class="d-flex w-100 justify-content-center align-items-top"
+                            >
+                                <div
+                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
+                                    style="height: 73px"
+                                >
+                                    <div class="label">
+                                        <span class="text-center">
+                                            APP STARTS
+                                        </span>
+                                        <p class="text-center">45,049</p>
+                                    </div>
+                                    <div class="connect_down_last">
+                                        <img
+                                            src="assets/images/connect_down4.svg"
+                                            alt="Sankey Chart Node Connection"
+                                        />
+                                        <div class="exit_node">
+                                            <span>Exit</span>
+                                            <span>790</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="connect_up">
+                                    <img
+                                        src="assets/images/connect_up4.svg"
+                                        alt="Sankey Chart Node Connection"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-col w-100 h-100">
+                            <div
+                                class="d-flex w-100 justify-content-center align-items-top"
+                            >
+                                <div
+                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
+                                    style="height: 52px"
+                                >
+                                    <div class="label">
+                                        <span class="text-center">
+                                            APP COMPLETES
+                                        </span>
+                                        <p class="text-center">19,719</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========== sankey chart end ========== -->
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</html>

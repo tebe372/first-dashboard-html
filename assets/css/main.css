@@ -1,0 +1,497 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Raleway" !important;
+    font-weight: normal;
+    font-style: normal;
+    color: #5d657b;
+    overflow-x: hidden;
+    background: #f1f5f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+.btn:focus,
+.btn.focus,
+.btn:not(:disabled):not(.disabled).active,
+.btn:not(:disabled):not(.disabled):active {
+    text-decoration: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+a:hover {
+    color: #4a6cf7;
+}
+
+button,
+a {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+i,
+span,
+a {
+    display: inline-block;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+}
+
+ul,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0px;
+}
+
+.img-bg {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.para-width-500 {
+    max-width: 500px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+/* =========== Sidebar css =========== */
+.sidebar-nav-wrapper {
+    background: #fff;
+    padding-top: 106px;
+    width: 130px;
+    height: 100vh;
+    position: fixed;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(200, 208, 216, 0.3);
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+    only screen and (min-width: 768px) and (max-width: 991px),
+    (max-width: 767px) {
+    .sidebar-nav-wrapper {
+        -webkit-transform: translateX(-140px);
+        -moz-transform: translateX(-140px);
+        -ms-transform: translateX(-140px);
+        -o-transform: translateX(-140px);
+        transform: translateX(-140px);
+    }
+}
+.sidebar-nav-wrapper.active {
+    -webkit-transform: translateX(-140px);
+    -moz-transform: translateX(-140px);
+    -ms-transform: translateX(-140px);
+    -o-transform: translateX(-140px);
+    transform: translateX(-140px);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+    only screen and (min-width: 768px) and (max-width: 991px),
+    (max-width: 767px) {
+    .sidebar-nav-wrapper.active {
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+.sidebar-nav-wrapper .sidebar-nav ul .nav-item {
+    width: 100%;
+    position: relative;
+    margin-bottom: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-nav-wrapper .sidebar-nav ul .nav-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5d657b;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar-nav-wrapper .sidebar-nav ul .nav-item a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #4a6cf7;
+    border-radius: 0 3px 3px 0px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+.sidebar-nav-wrapper .sidebar-nav ul .nav-item a span.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sidebar-nav-wrapper .sidebar-nav ul .nav-item a .icon {
+    width: 26px;
+    height: 26px;
+    color: #9f9f9f;
+}
+
+.sidebar-nav-wrapper .sidebar-nav ul .nav-item a .icon.active {
+    width: 38px;
+    height: 38px;
+    color: #0f1b29;
+}
+.sidebar-nav-wrapper .sidebar-nav ul .nav-item a .icon svg {
+    fill: currentColor;
+}
+
+.sidebar-nav-wrapper .sidebar-nav ul .nav-item.active > a::before,
+.sidebar-nav-wrapper .sidebar-nav ul .nav-item:hover > a::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========== main-wrapper css ========== */
+.main-wrapper {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    margin-left: 130px;
+    min-height: 100vh;
+    padding-bottom: 85px;
+    position: relative;
+    background: white;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+    only screen and (min-width: 768px) and (max-width: 991px),
+    (max-width: 767px) {
+    .main-wrapper {
+        margin-left: 0;
+    }
+}
+/* ========== header css ========== */
+.header {
+    padding-top: 40px;
+    padding-left: 75px;
+}
+
+.header .title {
+    font-weight: 800;
+    font-size: 36px;
+    color: #0f1b29;
+}
+
+/* ========== content css ========== */
+.content {
+    padding: 24px 75px;
+}
+
+@media (max-width: 992px) {
+    .content {
+        padding: 24px 30px !important;
+    }
+}
+/* ========== content header card css ========== */
+.content .headercard {
+    position: relative;
+    width: 100%;
+    height: 195px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-top: 27px;
+    margin-right: 27px;
+    padding-left: 23px;
+    min-width: 270px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.content .headercard .icon {
+    margin-top: 25px;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #ffffff40;
+}
+.content .headercard .icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.content .headercard .title {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.content .headercard .count {
+    font-family: "Raleway-Medium", sans-serif;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    color: white;
+}
+
+.content .headercard .arrow {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff40;
+    color: red;
+}
+
+.content .headercard .percent {
+    font-family: "Raleway-Medium", sans-serif;
+    margin-left: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+.content .headercard .gr_blue {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+    height: 195px;
+    border-radius: 8px;
+    background: linear-gradient(
+        180deg,
+        rgba(17, 138, 178, 0) 0%,
+        #097092 95.64%
+    );
+}
+
+.content .headercard .gr_green {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+    height: 195px;
+    border-radius: 8px;
+    background: linear-gradient(
+        180deg,
+        rgba(5, 164, 123, 0) 0%,
+        #05a47b 95.64%
+    );
+}
+
+.content .headercard .gr_yellow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+    height: 195px;
+    border-radius: 8px;
+    background: linear-gradient(
+        180deg,
+        rgba(229, 170, 33, 0) 0%,
+        #e5aa21 95.64%
+    );
+}
+
+.content .headercard .gr_red {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+    height: 195px;
+    border-radius: 8px;
+    background: linear-gradient(
+        180deg,
+        rgba(199, 24, 66, 0) 0%,
+        #c71842 95.64%
+    );
+}
+
+.content .headercard .outer_circle {
+    width: 354px;
+    height: 354px;
+    border-radius: 100%;
+    z-index: -10;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0) 43.23%,
+        #ffffff 100%
+    );
+    opacity: 0.4;
+}
+
+.content .headercard .inner_circle {
+    width: 216px;
+    height: 216px;
+    border-radius: 100%;
+    z-index: -10;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0) 43.23%,
+        #ffffff 100%
+    );
+    opacity: 0.4;
+}
+
+/* ========== sankey chart css ========== */
+.sankey_chart {
+    width: 100%;
+    height: 300px;
+    margin-top: 36px;
+}
+.sankey_chart .sankey_node {
+    position: relative;
+    background-color: #cedff9;
+}
+
+.sankey_chart .sankey_node .label span {
+    font-weight: 800;
+    font-size: 13px;
+    color: #1a71f3;
+}
+
+.sankey_chart .sankey_node .label p {
+    font-family: "Raleway-Medium", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+    color: #1a71f3;
+}
+
+.sankey_chart .sankey_node .connect_down {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    transform: translate(100%, 40%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.sankey_chart .sankey_node .connect_down_last {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    transform: translate(100%, 40%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    transform: translate(100%, 60%);
+}
+.sankey_chart .connect_up {
+    z-index: 1;
+}
+.sankey_chart .sankey_node .exit_node {
+    width: 103px;
+    height: 36px;
+    background-color: #ef476f;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sankey_chart .sankey_node .exit_node span {
+    font-family: "Raleway-Medium", sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500;
+    color: white;
+}
