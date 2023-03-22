@@ -3,6 +3,10 @@
     src: url("../fonts/Raleway-Regular.ttf") format("truetype");
 }
 @font-face {
+    font-family: "Raleway-Bold";
+    src: url("../fonts/Raleway-Bold.ttf") format("truetype");
+}
+@font-face {
     font-family: "Raleway-ExtraBold";
     src: url("../fonts/Raleway-ExtraBold.ttf") format("truetype");
 }
@@ -93,7 +97,6 @@ ol {
 
 p {
     font-size: 16px;
-    font-weight: 400;
     line-height: 25px;
     margin: 0px;
 }
@@ -274,7 +277,7 @@ p {
     padding: 24px 75px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1199px) {
     .content {
         padding: 24px 30px !important;
     }
@@ -316,13 +319,13 @@ p {
 }
 
 .content .headercard .count {
-    font-family: "Raleway", sans-serif;
+    font-family: "Raleway-Bold", sans-serif;
     margin-top: 6px;
     margin-bottom: 8px;
     font-size: 40px;
-    font-weight: 700;
     line-height: 47px;
     color: white;
+    font-variant-numeric: lining-nums;
 }
 
 .content .headercard .arrow {
@@ -333,14 +336,17 @@ p {
 }
 
 .content .headercard .percent {
-    font-family: "Raleway", sans-serif;
+    font-family: "Raleway-Bold", sans-serif;
     margin-left: 6px;
     font-size: 14px;
-    font-weight: 600;
     color: white;
+    font-variant-numeric: lining-nums;
 }
 
-.content .headercard .gr_blue {
+.content .headercard .gr_blue,
+.content .headercard .gr_green,
+.content .headercard .gr_yellow,
+.content .headercard .gr_red {
     position: absolute;
     left: 0;
     top: 0;
@@ -356,13 +362,6 @@ p {
 }
 
 .content .headercard .gr_green {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -10;
-    width: 100%;
-    height: 195px;
-    border-radius: 8px;
     background: linear-gradient(
         180deg,
         rgba(5, 164, 123, 0) 0%,
@@ -371,13 +370,6 @@ p {
 }
 
 .content .headercard .gr_yellow {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -10;
-    width: 100%;
-    height: 195px;
-    border-radius: 8px;
     background: linear-gradient(
         180deg,
         rgba(229, 170, 33, 0) 0%,
@@ -386,13 +378,6 @@ p {
 }
 
 .content .headercard .gr_red {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -10;
-    width: 100%;
-    height: 195px;
-    border-radius: 8px;
     background: linear-gradient(
         180deg,
         rgba(199, 24, 66, 0) 0%,
@@ -446,7 +431,6 @@ p {
 }
 
 .sankey_chart .sankey_node .label span {
-    font-weight: 800;
     font-size: 13px;
     color: #1a71f3;
 }
@@ -456,7 +440,13 @@ p {
     font-weight: 600;
     font-size: 13px;
     line-height: 15px;
+    margin-top: 2px;
     color: #1a71f3;
+    font-variant-numeric: lining-nums;
+}
+
+.sankey_chart .sankey_node:last-child .label p {
+    margin-top: 0px;
 }
 
 .sankey_chart .sankey_node .connect_down {
@@ -495,10 +485,14 @@ p {
     color: white;
 }
 
-.sankey_chart .sankey_node .exit_node span {
+.sankey_chart .sankey_node .exit_node span:first-child,
+.sankey_chart .sankey_node .exit_node span:nth-child(2) {
     font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    line-height: 15px;
-    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
     color: white;
+    font-variant-numeric: lining-nums;
+}
+.sankey_chart .sankey_node .exit_node span:nth-child(2) {
+    font-size: 13px;
 }
