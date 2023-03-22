@@ -8,6 +8,9 @@
 
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/main.css" />
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
     </head>
     <body>
         <!-- ======== sidebar-nav start =========== -->
@@ -15,7 +18,7 @@
             <nav class="sidebar-nav">
                 <ul>
                     <li class="nav-item active">
-                        <a href="#0">
+                        <a href="#">
                             <span class="icon active">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +263,7 @@
                                             src="assets/images/arrow_down_line.svg"
                                         />
                                     </div>
-                                    <span class="percent"> +40% </span>
+                                    <span class="percent"> -40% </span>
                                 </div>
                             </div>
                         </div>
@@ -269,161 +272,380 @@
 
                     <!-- ========== sankey chart begin ========== -->
                     <div class="sankey_chart d-flex flex-row">
-                        <div class="d-flex flex-col w-100 h-100">
-                            <div
-                                class="d-flex w-100 justify-content-center align-items-top"
-                            >
+                        <!-- ========== sankey chart left part begin ========== -->
+                        <div class="sankey_left">
+                            <div class="node">
                                 <div
-                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
-                                    style="height: 228px"
+                                    class="square"
+                                    style="
+                                        background-color: #caf4e9;
+                                        color: #05a47b;
+                                    "
                                 >
-                                    <div class="label">
-                                        <span class="text-center">
-                                            SITE IMPRESSIONS
-                                        </span>
-                                        <p class="text-center">4,991,707</p>
+                                    <span>SEO</span>
+                                    <span>20%</span>
+                                </div>
+
+                                <img
+                                    src="assets/images/arrow1.svg"
+                                    alt="Sankey left part arrow"
+                                />
+                            </div>
+                            <div class="node">
+                                <div
+                                    class="square"
+                                    style="
+                                        background-color: #cbdfe6;
+                                        color: #097092;
+                                    "
+                                >
+                                    <span>PAID SEARCH</span>
+                                    <span>10%</span>
+                                </div>
+
+                                <img
+                                    src="assets/images/arrow2.svg"
+                                    alt="Sankey left part arrow"
+                                />
+                            </div>
+                            <div class="node">
+                                <div
+                                    class="square"
+                                    style="
+                                        background-color: #fcf3dd;
+                                        color: #e5aa21;
+                                    "
+                                >
+                                    <span>SOCIAL</span>
+                                    <span>34%</span>
+                                </div>
+
+                                <img
+                                    src="assets/images/arrow3.svg"
+                                    alt="Sankey left part arrow"
+                                />
+                            </div>
+                            <div class="node">
+                                <div
+                                    class="square"
+                                    style="
+                                        background-color: #ef476f20;
+                                        color: #ef476f;
+                                    "
+                                >
+                                    <span>EMAIL</span>
+                                    <span>34%</span>
+                                </div>
+
+                                <img
+                                    src="assets/images/arrow4.svg"
+                                    alt="Sankey left part arrow"
+                                />
+                            </div>
+                        </div>
+                        <!-- ========== sankey chart left part end ========== -->
+                        <!-- ========== sankey chart right part begin ========== -->
+
+                        <div class="sankey_right d-flex flex-row">
+                            <div class="d-flex flex-col w-100 h-100">
+                                <div
+                                    class="d-flex w-100 justify-content-center align-items-top"
+                                >
+                                    <div
+                                        class="sankey_node sankey_node_first d-flex flex-row w-100 justify-content-center align-items-center"
+                                        style="height: 228px"
+                                    >
+                                        <div class="label">
+                                            <span class="text-center">
+                                                SITE IMPRESSIONS
+                                            </span>
+                                            <p class="text-center">4,991,707</p>
+                                        </div>
+                                        <div class="connect_down">
+                                            <svg
+                                                width="89"
+                                                height="88"
+                                                viewBox="0 0 89 88"
+                                                preserveAspectRatio="none"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    opacity="0.2"
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M89 52C44.5 52 44.5 0 0 0V52C44.5 52 44.5 88 89 88"
+                                                    fill="url(#paint0_linear_481_86)"
+                                                />
+                                                <defs>
+                                                    <linearGradient
+                                                        id="paint0_linear_481_86"
+                                                        x1="0"
+                                                        y1="44"
+                                                        x2="89"
+                                                        y2="44"
+                                                        gradientUnits="userSpaceOnUse"
+                                                    >
+                                                        <stop
+                                                            stop-color="#EF476F"
+                                                        />
+                                                        <stop
+                                                            offset="0.5"
+                                                            stop-color="#D9D9D9"
+                                                        />
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <div class="exit_node">
+                                                <span>EXIT</span>
+                                                <span>456</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="connect_down">
+                                    <div class="connect_up">
                                         <img
-                                            src="assets/images/connect_down1.svg"
+                                            src="assets/images/connect_up1.svg"
                                             alt="Sankey Chart Node Connection"
                                         />
-                                        <div class="exit_node">
-                                            <span>EXIT</span>
-                                            <span>456</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-col w-100 h-100">
+                                <div
+                                    class="d-flex w-100 justify-content-center align-items-top"
+                                >
+                                    <div
+                                        class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
+                                        style="height: 176px"
+                                    >
+                                        <div class="label">
+                                            <span class="text-center">
+                                                SITE VISITS
+                                            </span>
+                                            <p class="text-center">1,789,744</p>
+                                        </div>
+                                        <div class="connect_down">
+                                            <svg
+                                                width="90"
+                                                height="87"
+                                                viewBox="0 0 90 87"
+                                                fill="none"
+                                                preserveAspectRatio="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    opacity="0.2"
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M90 51C45 51 45 0 0 0V51C45 51 45 87 90 87"
+                                                    fill="url(#paint0_linear_481_84)"
+                                                />
+                                                <defs>
+                                                    <linearGradient
+                                                        id="paint0_linear_481_84"
+                                                        x1="0"
+                                                        y1="43.5"
+                                                        x2="90"
+                                                        y2="43.5"
+                                                        gradientUnits="userSpaceOnUse"
+                                                    >
+                                                        <stop
+                                                            stop-color="#EF476F"
+                                                        />
+                                                        <stop
+                                                            offset="0.5"
+                                                            stop-color="#D9D9D9"
+                                                        />
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+
+                                            <div class="exit_node">
+                                                <span>EXIT</span>
+                                                <span>560</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="connect_up">
+                                        <img
+                                            src="assets/images/connect_up2.svg"
+                                            alt="Sankey Chart Node Connection"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-col w-100 h-100">
+                                <div
+                                    class="d-flex w-100 justify-content-center align-items-top"
+                                >
+                                    <div
+                                        class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
+                                        style="height: 124px"
+                                    >
+                                        <div class="label">
+                                            <span class="text-center">
+                                                DEPOSIT PRODUCT VIEWS
+                                            </span>
+                                            <p class="text-center">535,419</p>
+                                        </div>
+                                        <div class="connect_down">
+                                            <svg
+                                                width="90"
+                                                height="87"
+                                                viewBox="0 0 90 87"
+                                                fill="none"
+                                                preserveAspectRatio="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    opacity="0.2"
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M90 51C45 51 45 0 0 0V51C45 51 45 87 90 87"
+                                                    fill="url(#paint0_linear_481_84)"
+                                                />
+                                                <defs>
+                                                    <linearGradient
+                                                        id="paint0_linear_481_84"
+                                                        x1="0"
+                                                        y1="43.5"
+                                                        x2="90"
+                                                        y2="43.5"
+                                                        gradientUnits="userSpaceOnUse"
+                                                    >
+                                                        <stop
+                                                            stop-color="#EF476F"
+                                                        />
+                                                        <stop
+                                                            offset="0.5"
+                                                            stop-color="#D9D9D9"
+                                                        />
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+
+                                            <div class="exit_node">
+                                                <span>EXIT</span>
+                                                <span>338</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="connect_up">
+                                        <img
+                                            src="assets/images/connect_up3.svg"
+                                            alt="Sankey Chart Node Connection"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-col w-100 h-100">
+                                <div
+                                    class="d-flex w-100 justify-content-center align-items-top"
+                                >
+                                    <div
+                                        class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
+                                        style="height: 73px"
+                                    >
+                                        <div class="label">
+                                            <span class="text-center">
+                                                APP STARTS
+                                            </span>
+                                            <p class="text-center">45,049</p>
+                                        </div>
+                                        <div class="connect_down_last">
+                                            <svg
+                                                width="88"
+                                                height="57"
+                                                viewBox="0 0 88 57"
+                                                fill="none"
+                                                preserveAspectRatio="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    opacity="0.2"
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M88 21C44 21 44 0 0 0V22C44 22 44 57 88 57"
+                                                    fill="url(#paint0_linear_481_85)"
+                                                />
+                                                <defs>
+                                                    <linearGradient
+                                                        id="paint0_linear_481_85"
+                                                        x1="0"
+                                                        y1="28.5"
+                                                        x2="88"
+                                                        y2="28.5"
+                                                        gradientUnits="userSpaceOnUse"
+                                                    >
+                                                        <stop
+                                                            stop-color="#EF476F"
+                                                        />
+                                                        <stop
+                                                            offset="0.5"
+                                                            stop-color="#D9D9D9"
+                                                        />
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+
+                                            <div class="exit_node">
+                                                <span>EXIT</span>
+                                                <span>790</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="connect_up">
+                                        <img
+                                            src="assets/images/connect_up4.svg"
+                                            alt="Sankey Chart Node Connection"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-col w-100 h-100">
+                                <div
+                                    class="d-flex w-100 justify-content-center align-items-top"
+                                >
+                                    <div
+                                        class="sankey_node sankey_node_last d-flex flex-row w-100 justify-content-center align-items-center"
+                                        style="height: 52px"
+                                    >
+                                        <div class="label">
+                                            <span class="text-center">
+                                                APP COMPLETES
+                                            </span>
+                                            <p class="text-center">19,719</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="connect_up">
-                                    <img
-                                        src="assets/images/connect_up1.svg"
-                                        alt="Sankey Chart Node Connection"
-                                    />
-                                </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-col w-100 h-100">
-                            <div
-                                class="d-flex w-100 justify-content-center align-items-top"
-                            >
-                                <div
-                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
-                                    style="height: 176px"
-                                >
-                                    <div class="label">
-                                        <span class="text-center">
-                                            SITE VISITS
-                                        </span>
-                                        <p class="text-center">1,789,744</p>
-                                    </div>
-                                    <div class="connect_down">
-                                        <img
-                                            src="assets/images/connect_down2.svg"
-                                            alt="Sankey Chart Node Connection"
-                                        />
-                                        <div class="exit_node">
-                                            <span>EXIT</span>
-                                            <span>560</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="connect_up">
-                                    <img
-                                        src="assets/images/connect_up2.svg"
-                                        alt="Sankey Chart Node Connection"
-                                    />
-                                </div>
+                        <!-- ========== sankey chart right part end ========== -->
+                    </div>
+                    <!-- ========== sankey chart end ========== -->
+
+                    <!-- ========== Three charts part begin ========== -->
+                    <div class="row" style="margin-top: 37px">
+                        <div
+                            class="row col-xl-8 col-lg-12 two_charts_container"
+                        >
+                            <div class="col-md-6 col-sm-12">
+                                <figure class="highcharts-figure">
+                                    <div id="pie-container"></div>
+                                </figure>
                             </div>
-                        </div>
-                        <div class="d-flex flex-col w-100 h-100">
-                            <div
-                                class="d-flex w-100 justify-content-center align-items-top"
-                            >
-                                <div
-                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
-                                    style="height: 124px"
-                                >
-                                    <div class="label">
-                                        <span class="text-center">
-                                            DEPOSIT PRODUCT VIEWS
-                                        </span>
-                                        <p class="text-center">535,419</p>
-                                    </div>
-                                    <div class="connect_down">
-                                        <img
-                                            src="assets/images/connect_down3.svg"
-                                            alt="Sankey Chart Node Connection"
-                                        />
-                                        <div class="exit_node">
-                                            <span>EXIT</span>
-                                            <span>338</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="connect_up">
-                                    <img
-                                        src="assets/images/connect_up3.svg"
-                                        alt="Sankey Chart Node Connection"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-col w-100 h-100">
-                            <div
-                                class="d-flex w-100 justify-content-center align-items-top"
-                            >
-                                <div
-                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
-                                    style="height: 73px"
-                                >
-                                    <div class="label">
-                                        <span class="text-center">
-                                            APP STARTS
-                                        </span>
-                                        <p class="text-center">45,049</p>
-                                    </div>
-                                    <div class="connect_down_last">
-                                        <img
-                                            src="assets/images/connect_down4.svg"
-                                            alt="Sankey Chart Node Connection"
-                                        />
-                                        <div class="exit_node">
-                                            <span>EXIT</span>
-                                            <span>790</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="connect_up">
-                                    <img
-                                        src="assets/images/connect_up4.svg"
-                                        alt="Sankey Chart Node Connection"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-col w-100 h-100">
-                            <div
-                                class="d-flex w-100 justify-content-center align-items-top"
-                            >
-                                <div
-                                    class="sankey_node d-flex flex-row w-100 justify-content-center align-items-center"
-                                    style="height: 52px"
-                                >
-                                    <div class="label">
-                                        <span class="text-center">
-                                            APP COMPLETES
-                                        </span>
-                                        <p class="text-center">19,719</p>
-                                    </div>
-                                </div>
+                            <div class="col-md-6 col-sm-12">
+                                <figure class="highcharts-figure">
+                                    <div id="bar-sales-container"></div>
+                                </figure>
                             </div>
                         </div>
                     </div>
-                    <!-- ========== sankey chart end ========== -->
                 </div>
             </div>
         </div>
     </body>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </html>
