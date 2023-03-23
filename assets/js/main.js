@@ -196,6 +196,7 @@ Highcharts.chart("pie-container", {
         itemStyle: {
             fontFamily: "Raleway-Medium, sans-serif",
             fontSize: "12px",
+            fontWeight: "500",
         },
         itemMarginTop: 9,
     },
@@ -239,7 +240,10 @@ const barOptions1 = {
         style: {
             fontFamily: "Raleway-ExtraBold, sans-serif",
             fontSize: "11px",
+            color: "black",
         },
+        align: "left",
+        widthAdjust: 10,
     },
     xAxis: {
         categories: ["2007", "2008", "2009"],
@@ -250,6 +254,7 @@ const barOptions1 = {
                 fontFamily: "Raleway-Regular, sans-serif",
             },
         },
+        lineWidth: 0,
     },
     yAxis: {
         title: {
@@ -263,6 +268,8 @@ const barOptions1 = {
                 fontFamily: "Raleway-Regular, sans-serif",
             },
         },
+        startOnTick: false,
+        // min: 1,
     },
     legend: {
         enabled: false,
@@ -291,3 +298,178 @@ const barOptions1 = {
 };
 
 Highcharts.chart("bar-sales-container", barOptions1);
+
+Highcharts.chart("line-container", {
+    credits: {
+        enabled: false,
+    },
+    chart: {
+        type: "spline",
+    },
+    title: {
+        text: "",
+    },
+    xAxis: {
+        type: "datetime",
+        labels: {
+            overflow: "justify",
+            formatter: function () {
+                return Highcharts.dateFormat("%b", this.value);
+            },
+        },
+        tickWidth: 0,
+        lineWidth: 0,
+        tickInterval: 1000 * 3600 * 24 * 30,
+    },
+    yAxis: {
+        title: {
+            text: "",
+        },
+        gridLineWidth: 1,
+        gridLineColor: "#E0E0E0",
+        gridLineDashStyle: "LongDash",
+    },
+    tooltip: {
+        enabled: false,
+    },
+    plotOptions: {
+        spline: {
+            lineWidth: 2,
+            states: {
+                hover: {
+                    lineWidth: 3,
+                },
+            },
+            marker: {
+                enabled: false,
+            },
+            pointInterval: 1000 * 3600 * 24 * 10,
+            pointStart: Date.UTC(2023, 1, 1, 0, 0, 0),
+        },
+    },
+    series: [
+        {
+            name: "Benchmark Conv Rate",
+            data: [
+                2.1, 2.2, 2.3, 2.4, 2.3, 2.2, 2.3, 2.4, 2.5, 2.6, 2.5, 2.4, 2.4,
+                2.3, 2.2, 2.1, 2.0, 1.9, 2.0, 2.1, 2.0, 2.1, 2.2, 2.3, 2.2,
+            ],
+            color: "#1A71F3",
+            shadow: {
+                color: "#1A71F309",
+                offsetX: 0,
+                offsetY: 10,
+                opacity: 0.1,
+                width: 30,
+            },
+        },
+        {
+            name: "Industry Avg Conv Rate",
+            data: [
+                1.1, 1.1, 1.2, 1.3, 1.2, 1.1, 1.2, 1.3, 1.4, 1.5, 1.4, 1.3, 1.2,
+                1.1, 1.0, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.3, 1.2, 1.1, 1.1,
+            ],
+            color: "#EF476F",
+            shadow: {
+                color: "#EF476F09",
+                offsetX: 0,
+                offsetY: 10,
+                opacity: 0.1,
+                width: 30,
+            },
+        },
+        {
+            name: "Easterly Conv Rate",
+            data: [
+                1.1, 1.1, 1.0, 0.9, 0.8, 0.9, 0.8, 0.9, 1, 0.9, 0.8, 0.7, 0.8,
+                0.8, 0.7, 0.7, 0.7, 0.8, 0.9, 0.9, 1, 1.1, 1.2, 1.1, 1.0,
+            ],
+            color: "#06D6A0",
+            shadow: {
+                color: "#06D6A009",
+                offsetX: 0,
+                offsetY: 10,
+                opacity: 0.1,
+                width: 30,
+            },
+        },
+    ],
+    navigation: {
+        menuItemStyle: {
+            fontSize: "10px",
+        },
+    },
+
+    legend: {
+        layout: "horizontal",
+        align: "left",
+        verticalAlign: "top",
+        y: 20,
+        enabled: true,
+        itemStyle: {
+            fontFamily: "Raleway-Medium, sans-serif",
+            fontSize: "10px",
+            fontWeight: "500",
+        },
+        itemMarginBottom: 10,
+    },
+});
+
+function initMap() {
+    //var location = { lat: 33.8034, lng: -84.3963 };
+    var location = { lat: 41.716667, lng: 44.783333 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: location,
+        zoom: 8,
+        mapId: "4504f8b37365c3d0",
+    });
+    const locationTag = document.createElement("div");
+
+    locationTag.className = "location-tag";
+    locationTag.textContent = "Georgia";
+
+    const markerView = new google.maps.marker.AdvancedMarkerView({
+        map,
+        position: location,
+        content: locationTag,
+    });
+}
+
+// function initMap() {
+//     //var location = { lat: 33.8034, lng: -84.3963 };
+//     var location = { lat: 41.716667, lng: 44.783333 };
+//     var map;
+//     var georgia = new google.maps.LatLng(41.716667, 44.783333);
+
+//     var stylez = [
+//         {
+//             featureType: "all",
+//             elementType: "all",
+//             stylers: [{ saturation: -100 }],
+//         },
+//     ];
+
+//     var mapOptions = {
+//         zoom: 8,
+//         center: georgia,
+//         mapTypeControlOptions: {
+//             mapTypeIds: [google.maps.MapTypeId.ROADMAP, "tehgrayz"],
+//         },
+//         mapId: "4504f8b37365c3d0",
+//     };
+
+//     map = new google.maps.Map(document.getElementById("map"), mapOptions);
+//     const locationTag = document.createElement("div");
+
+//     locationTag.className = "location-tag";
+//     locationTag.textContent = "Georgia";
+
+//     const markerView = new google.maps.marker.AdvancedMarkerView({
+//         map,
+//         position: location,
+//         content: locationTag,
+//     });
+//     var mapType = new google.maps.StyledMapType(stylez, { name: "Grayscale" });
+//     map.mapTypes.set("tehgrayz", mapType);
+//     map.setMapTypeId("tehgrayz");
+// }
