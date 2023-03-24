@@ -198,6 +198,7 @@ Highcharts.chart("pie-container", {
             fontFamily: "Raleway-Medium, sans-serif",
             fontSize: "12px",
             fontWeight: "500",
+            color: "#0F1B29",
         },
         itemMarginTop: 9,
     },
@@ -229,7 +230,7 @@ Highcharts.chart("pie-container", {
     ],
 });
 
-const barOptions1 = {
+const barSalesOption = {
     credits: {
         enabled: false,
     },
@@ -256,6 +257,24 @@ const barOptions1 = {
             },
         },
         lineWidth: 0,
+        plotLines: [
+            {
+                color: "#FF0000",
+                width: 0,
+                value: 1,
+                label: {
+                    text: "0M",
+                    align: "left",
+                    y: 78,
+                    x: -1,
+                    style: {
+                        color: "#B5B5B5",
+                        fontSize: "10px",
+                        fontFamily: "Raleway-Regular, sans-serif",
+                    },
+                },
+            },
+        ],
     },
     yAxis: {
         title: {
@@ -270,14 +289,14 @@ const barOptions1 = {
             },
         },
         startOnTick: false,
-        // min: 1,
+        min: 1,
     },
     legend: {
         enabled: false,
     },
     series: [
         {
-            name: "Fruit Count",
+            name: "Bar chart data",
             data: [40000000, 80000000, 55000000],
         },
     ],
@@ -298,7 +317,7 @@ const barOptions1 = {
     },
 };
 
-Highcharts.chart("bar-sales-container", barOptions1);
+Highcharts.chart("bar-sales-container", barSalesOption);
 
 Highcharts.chart("line-container", {
     credits: {
@@ -306,6 +325,7 @@ Highcharts.chart("line-container", {
     },
     chart: {
         type: "spline",
+        spacing: [0, 0, 0, 0],
     },
     title: {
         text: "",
@@ -322,10 +342,13 @@ Highcharts.chart("line-container", {
                 fontSize: "10px",
                 fontFamily: "Raleway-Regular, sans-serif",
             },
+            y: 25,
         },
         tickWidth: 0,
         lineWidth: 0,
         tickInterval: 1000 * 3600 * 24 * 30,
+        maxPadding: 0,
+        minPadding: 0,
     },
     yAxis: {
         title: {
@@ -340,6 +363,7 @@ Highcharts.chart("line-container", {
                 fontSize: "10px",
                 fontFamily: "Raleway-Regular, sans-serif",
             },
+            x: -30,
         },
     },
     tooltip: {
@@ -417,13 +441,14 @@ Highcharts.chart("line-container", {
         layout: "horizontal",
         align: "left",
         verticalAlign: "top",
-        y: 20,
         enabled: true,
         itemStyle: {
             fontFamily: "Raleway-Medium, sans-serif",
             fontSize: "10px",
             fontWeight: "500",
         },
+        y: 20,
+        x: 20,
         itemMarginBottom: 10,
         symbolWidth: 36,
     },
@@ -449,7 +474,9 @@ function initMap() {
         content: locationTag,
     });
 }
-
+window.addEventListener("resize", function () {
+    google.maps.event.trigger(map, "resize");
+});
 // function initMap() {
 //     //var location = { lat: 33.8034, lng: -84.3963 };
 //     var location = { lat: 41.716667, lng: 44.783333 };

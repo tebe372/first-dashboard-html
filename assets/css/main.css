@@ -10,6 +10,10 @@
     font-family: "Raleway-ExtraBold";
     src: url("../fonts/Raleway-ExtraBold.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Raleway-SemiBold";
+    src: url("../fonts/Raleway-SemiBold.ttf") format("truetype");
+}
 
 html {
     scroll-behavior: smooth;
@@ -144,7 +148,7 @@ p {
     -o-transform: translateX(0);
     transform: translateX(0);
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px),
+@media only screen and (min-width: 992px) and (max-width: 1280px),
     only screen and (min-width: 768px) and (max-width: 991px),
     (max-width: 767px) {
     .sidebar-nav-wrapper {
@@ -162,7 +166,7 @@ p {
     -o-transform: translateX(-140px);
     transform: translateX(-140px);
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px),
+@media only screen and (min-width: 992px) and (max-width: 1280px),
     only screen and (min-width: 768px) and (max-width: 991px),
     (max-width: 767px) {
     .sidebar-nav-wrapper.active {
@@ -199,11 +203,10 @@ p {
     content: "";
     position: absolute;
     left: 0;
-    top: 0;
-    height: 100%;
-    width: 3px;
-    background: #4a6cf7;
-    border-radius: 0 3px 3px 0px;
+    top: -10;
+    height: 51px;
+    width: 4px;
+    background: #1a71f3;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.3s ease-out 0s;
@@ -254,7 +257,7 @@ p {
     background: #fbfbfb;
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px),
+@media only screen and (min-width: 992px) and (max-width: 1280px),
     only screen and (min-width: 768px) and (max-width: 991px),
     (max-width: 767px) {
     .main-wrapper {
@@ -585,7 +588,7 @@ p {
     padding: 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1060px) {
     .two_charts_container {
         width: 100% !important;
     }
@@ -595,8 +598,8 @@ p {
 }
 @media (min-width: 1600px) {
     .two_charts_container > div:first-child {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 20px;
+        padding-right: 80px;
     }
 }
 
@@ -606,10 +609,12 @@ p {
     padding-left: 50px;
     padding-right: 35px;
 }
-@media (min-width: 576px) {
+@media (max-width: 768px) {
     .two_charts_container > div:first-child,
     .two_charts_container > div:last-child {
-        width: 100%;
+        width: 100% !important;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 /* ========== pie chart css ========== */
@@ -678,7 +683,7 @@ p {
     position: relative;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1060px) {
     .map-container {
         margin-top: 20px;
         width: 100%;
@@ -729,9 +734,147 @@ p {
     z-index: -1;
 }
 
-#line-container {
+/* ========== line chart css ========== */
+.line-wrapper {
+    position: relative;
     height: 320px;
     background-color: white;
     margin-top: 36px;
     border-radius: 8px;
+}
+
+#line-container {
+    padding: 10px 43.5px 17px 24px;
+}
+.line-pagination {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    margin-right: 20px;
+    margin-top: 24px;
+}
+
+/* pagination styling */
+.line-pagination a {
+    font-family: "Raleway", sans-serif;
+    color: #b5b5b5;
+    padding: 0;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    font-variant-numeric: normal;
+}
+
+.line-pagination a:hover {
+    color: #1a71f3;
+}
+
+.line-pagination a:first-child,
+.line-pagination a:last-child {
+    padding: 0px 4px;
+    font-family: "Raleway-ExtraBold", sans-serif;
+    color: #e4e4e4;
+}
+.line-pagination a:first-child:hover,
+.line-pagination a:last-child:hover {
+    font-family: "Raleway-ExtraBold", sans-serif;
+    color: #b5b5b5;
+}
+
+/* ========== card style css ========== */
+.card-style-1 {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 18px 12px 18px 24px;
+    position: relative;
+    border-radius: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.bar-container {
+    position: relative;
+    height: 184px;
+}
+
+.mb-36 {
+    margin-bottom: 36px !important;
+}
+
+.bar-pagination {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    margin-top: 10px;
+    margin-right: 9%;
+}
+
+.bar-pagination a {
+    font-family: "Raleway", sans-serif;
+    color: #b5b5b5;
+    padding: 0;
+    margin-left: 1px;
+    text-decoration: none;
+    font-size: 11px;
+    font-variant-numeric: normal;
+}
+
+.bar-pagination a:hover,
+.bar-pagination a:active {
+    color: #1a71f3;
+}
+
+.card-style-2 {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px 25px;
+    position: relative;
+    border-radius: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.card-style-2 .title {
+    font-family: "Raleway-ExtraBold", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 14;
+    color: black;
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+    color: #878787;
+}
+
+th,
+td {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 0;
+    width: 33.33%;
+}
+tr:last-child td {
+    border-bottom: none;
+}
+td.left {
+    text-align: left;
+    font-family: "Raleway", sans-serif;
+}
+
+td.center {
+    text-align: center;
+    font-family: "Raleway-SemiBold", sans-serif;
+    font-feature-settings: "pnum" on, "lnum" on;
+}
+
+td.right {
+    text-align: right;
+    font-family: "Raleway-SemiBold", sans-serif;
+    color: #1a71f3;
+    font-feature-settings: "pnum" on, "lnum" on;
 }

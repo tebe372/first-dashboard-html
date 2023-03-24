@@ -8,7 +8,7 @@
 
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/main.css" />
-
+        <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
     </head>
@@ -616,7 +616,7 @@
 
                     <!-- ========== Three charts part begin ========== -->
                     <div class="row m-0 justify-content-between">
-                        <div class="row m-0 two_charts_container">
+                        <div class="row m-0 two_charts_container mb-36">
                             <div>
                                 <figure class="highcharts-figure">
                                     <div id="pie-container"></div>
@@ -626,7 +626,7 @@
                                 <div id="bar-sales-container"></div>
                             </div>
                         </div>
-                        <div class="map-container">
+                        <div class="map-container mb-36">
                             <span>BY COUNTY</span>
                             <!-- <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1510492.2337217857!2d42.236620068934464!3d42.31735632761069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x4f907964122d4ac2!2sGeorgia!5e0!3m2!1sen!2shk!4v1679576690633!5m2!1sen!2shk"
@@ -641,10 +641,260 @@
                             <div class="map" id="map"></div>
                         </div>
                     </div>
-                    <!-- ========== Three charts part end ========== -->
-                    <div class="row m-0">
-                        <div id="line-container"></div>
+                    <!-- ========== Three charts end ========== -->
+
+                    <!-- ========== Line chart begin ========== -->
+                    <div class="line-wrapper row m-0 mb-36">
+                        <div class="line-container" id="line-container"></div>
+                        <div class="line-pagination">
+                            <a href="#"><</a>
+                            <a href="#" title="2021">2021</a>
+                            <a href="#" title="2022">2022</a>
+                            <a href="#" title="2023">2023</a>
+                            <a href="#">></a>
+                        </div>
                     </div>
+                    <!-- ========== Line chart end ========== -->
+                    <!-- ========== Bar charts part begin ========== -->
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-style-1 mb-36">
+                                <div
+                                    class="bar-container"
+                                    id="bar-container1"
+                                ></div>
+                                <div class="bar-pagination">
+                                    <a href="#" title="Day">Day</a>
+                                    <a href="#" title="Week">Week</a>
+                                    <a href="#" title="Mon">Mon</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-style-1 mb-36">
+                                <div
+                                    class="bar-container"
+                                    id="bar-container2"
+                                ></div>
+                                <div class="bar-pagination">
+                                    <a href="#" title="Day">Day</a>
+                                    <a href="#" title="Week">Week</a>
+                                    <a href="#" title="Mon">Mon</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-style-1 mb-36">
+                                <div
+                                    class="bar-container"
+                                    id="bar-container3"
+                                ></div>
+                                <div class="bar-pagination">
+                                    <a href="#" title="Day">Day</a>
+                                    <a href="#" title="Week">Week</a>
+                                    <a href="#" title="Mon">Mon</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card-style-1 mb-36">
+                                <div
+                                    class="bar-container"
+                                    id="bar-container4"
+                                ></div>
+                                <div class="bar-pagination">
+                                    <a href="#" title="Day">Day</a>
+                                    <a href="#" title="Week">Week</a>
+                                    <a href="#" title="Mon">Mon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========== Bar charts part end ========== -->
+                    <!-- ========== Table part begin ========== -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card-style-2 mb-36">
+                                <div class="title">
+                                    <span>New Deposits by product</span>
+                                </div>
+                                <div class="table-responsive">
+                                    <table>
+                                        <tr>
+                                            <td class="left">CD</td>
+                                            <td class="center">10</td>
+                                            <td class="right">$5K</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">Checking</td>
+                                            <td class="center">23</td>
+                                            <td class="right">$2.5K</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">Savings</td>
+                                            <td class="center">14</td>
+                                            <td class="right">$3K</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">MMA</td>
+                                            <td class="center">36</td>
+                                            <td class="right">$10K</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">RIA</td>
+                                            <td class="center">12</td>
+                                            <td class="right">$3.6K</td>
+                                        </tr>
+                                    </table>
+                                    <!-- End Table -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card-style-2 mb-36">
+                                <div class="title">
+                                    <span>Campaign performance</span>
+                                </div>
+                                <div class="table-responsive">
+                                    <table>
+                                        <tr>
+                                            <td class="left">Paid Search</td>
+                                            <td class="center">10</td>
+                                            <td class="right">$5K</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">Paid Social</td>
+                                            <td class="center">23</td>
+                                            <td class="right">$2.5K</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">Email</td>
+                                            <td class="center">14</td>
+                                            <td class="right">$3K</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">SEO</td>
+                                            <td class="center">36</td>
+                                            <td class="right">$10K</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">Direct</td>
+                                            <td class="center">12</td>
+                                            <td class="right">$3.6K</td>
+                                        </tr>
+                                    </table>
+                                    <!-- End Table -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card-style-2 mb-36">
+                                <div class="title">
+                                    <span>Top lead in pages</span>
+                                </div>
+                                <div class="table-responsive">
+                                    <table>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- End Table -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card-style-2 mb-36">
+                                <div class="title">
+                                    <span>Top landing pages</span>
+                                </div>
+                                <div class="table-responsive">
+                                    <table>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the landing page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the landing page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the landing page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the landing page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="left">
+                                                Name of the landing page
+                                            </td>
+                                            <td class="right">
+                                                https://website.com
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- End Table -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ========== Table part end ========== -->
                 </div>
             </div>
         </div>
@@ -657,4 +907,5 @@
     ></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/charts.js"></script>
 </html>
