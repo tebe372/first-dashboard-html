@@ -870,6 +870,7 @@ td.center {
     text-align: center;
     font-family: "Raleway-SemiBold", sans-serif;
     font-feature-settings: "pnum" on, "lnum" on;
+    padding-right: 30px;
 }
 
 td.right {
