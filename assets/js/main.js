@@ -186,6 +186,7 @@ Highcharts.chart("pie-container", {
             style: {
                 fontFamily: "Raleway-ExtraBold, sans-serif",
                 fontSize: "11px",
+                fontWeight: "normal",
             },
         },
         align: "right",
@@ -316,6 +317,11 @@ Highcharts.chart("line-container", {
             formatter: function () {
                 return Highcharts.dateFormat("%b", this.value);
             },
+            style: {
+                color: "#B5B5B5",
+                fontSize: "10px",
+                fontFamily: "Raleway-Regular, sans-serif",
+            },
         },
         tickWidth: 0,
         lineWidth: 0,
@@ -328,6 +334,13 @@ Highcharts.chart("line-container", {
         gridLineWidth: 1,
         gridLineColor: "#E0E0E0",
         gridLineDashStyle: "LongDash",
+        labels: {
+            style: {
+                color: "#B5B5B5",
+                fontSize: "10px",
+                fontFamily: "Raleway-Regular, sans-serif",
+            },
+        },
     },
     tooltip: {
         enabled: false,
@@ -412,6 +425,7 @@ Highcharts.chart("line-container", {
             fontWeight: "500",
         },
         itemMarginBottom: 10,
+        symbolWidth: 36,
     },
 });
 
@@ -422,6 +436,7 @@ function initMap() {
         center: location,
         zoom: 8,
         mapId: "4504f8b37365c3d0",
+        disableDefaultUI: true,
     });
     const locationTag = document.createElement("div");
 

@@ -587,10 +587,12 @@ p {
 
 @media (max-width: 992px) {
     .two_charts_container {
-        width: 100%;
+        width: 100% !important;
     }
 }
-
+.two_charts_container > div:first-child {
+    width: 55% !important;
+}
 @media (min-width: 1600px) {
     .two_charts_container > div:first-child {
         padding-left: 50px;
@@ -599,9 +601,16 @@ p {
 }
 
 .two_charts_container > div:last-child {
+    width: 45% !important;
     margin-top: 5px;
     padding-left: 50px;
-    padding-right: 40px;
+    padding-right: 35px;
+}
+@media (min-width: 576px) {
+    .two_charts_container > div:first-child,
+    .two_charts_container > div:last-child {
+        width: 100%;
+    }
 }
 /* ========== pie chart css ========== */
 #pie-container {
@@ -616,7 +625,6 @@ p {
 }
 
 .highcharts-data-table table {
-    font-family: Verdana, sans-serif;
     border-collapse: collapse;
     border: 1px solid #ebebeb;
     margin: 10px auto;
@@ -653,7 +661,8 @@ p {
 }
 
 #bar-sales-container {
-    height: 173px;
+    margin-top: 20px;
+    height: 193px;
     /* margin-left: 50px;
     margin-top: 23px;
     margin-right: 40px; */
@@ -663,7 +672,7 @@ p {
 .map-container {
     background-color: white;
     border-radius: 8px;
-    padding: 15px;
+    padding: 20px 24px;
     height: 220px;
     width: 31%;
     position: relative;
