@@ -319,12 +319,15 @@ const barSalesOption = {
 
 Highcharts.chart("bar-sales-container", barSalesOption);
 
+Highcharts.seriesTypes.areaspline.prototype.drawLegendSymbol =
+    Highcharts.seriesTypes.line.prototype.drawLegendSymbol;
+
 Highcharts.chart("line-container", {
     credits: {
         enabled: false,
     },
     chart: {
-        type: "spline",
+        type: "areaspline",
         spacing: [0, 0, 0, 0],
     },
     title: {
@@ -370,7 +373,7 @@ Highcharts.chart("line-container", {
         enabled: false,
     },
     plotOptions: {
-        spline: {
+        areaspline: {
             lineWidth: 2,
             states: {
                 hover: {
@@ -387,18 +390,23 @@ Highcharts.chart("line-container", {
     series: [
         {
             name: "Benchmark Conv Rate",
+            fillColor: {
+                linearGradient: {
+                    x1: 0,
+                    y1: 0,
+                    x2: 0,
+                    y2: 1,
+                },
+                stops: [
+                    [0, "#1A71F310"],
+                    [1, "#1A71F300"],
+                ],
+            },
             data: [
                 2.1, 2.2, 2.3, 2.4, 2.3, 2.2, 2.3, 2.4, 2.5, 2.6, 2.5, 2.4, 2.4,
                 2.3, 2.2, 2.1, 2.0, 1.9, 2.0, 2.1, 2.0, 2.1, 2.2, 2.3, 2.2,
             ],
             color: "#1A71F3",
-            shadow: {
-                color: "#1A71F309",
-                offsetX: 0,
-                offsetY: 10,
-                opacity: 0.1,
-                width: 30,
-            },
         },
         {
             name: "Industry Avg Conv Rate",
@@ -407,12 +415,17 @@ Highcharts.chart("line-container", {
                 1.1, 1.0, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.3, 1.2, 1.1, 1.1,
             ],
             color: "#EF476F",
-            shadow: {
-                color: "#EF476F09",
-                offsetX: 0,
-                offsetY: 10,
-                opacity: 0.1,
-                width: 30,
+            fillColor: {
+                linearGradient: {
+                    x1: 0,
+                    y1: 0,
+                    x2: 0,
+                    y2: 1,
+                },
+                stops: [
+                    [0, "#EF476F10"],
+                    [1, "#EF476F00"],
+                ],
             },
         },
         {
@@ -422,12 +435,17 @@ Highcharts.chart("line-container", {
                 0.8, 0.7, 0.7, 0.7, 0.8, 0.9, 0.9, 1, 1.1, 1.2, 1.1, 1.0,
             ],
             color: "#06D6A0",
-            shadow: {
-                color: "#06D6A009",
-                offsetX: 0,
-                offsetY: 10,
-                opacity: 0.1,
-                width: 30,
+            fillColor: {
+                linearGradient: {
+                    x1: 0,
+                    y1: 0,
+                    x2: 0,
+                    y2: 1,
+                },
+                stops: [
+                    [0, "#06D6A010"],
+                    [1, "#06D6A000"],
+                ],
             },
         },
     ],
@@ -453,65 +471,3 @@ Highcharts.chart("line-container", {
         symbolWidth: 36,
     },
 });
-
-function initMap() {
-    //var location = { lat: 33.8034, lng: -84.3963 };
-    var location = { lat: 41.716667, lng: 44.783333 };
-    const map = new google.maps.Map(document.getElementById("map"), {
-        center: location,
-        zoom: 8,
-        mapId: "4504f8b37365c3d0",
-        disableDefaultUI: true,
-    });
-    const locationTag = document.createElement("div");
-
-    locationTag.className = "location-tag";
-    locationTag.textContent = "Georgia";
-
-    const markerView = new google.maps.marker.AdvancedMarkerView({
-        map,
-        position: location,
-        content: locationTag,
-    });
-}
-window.addEventListener("resize", function () {
-    google.maps.event.trigger(map, "resize");
-});
-// function initMap() {
-//     //var location = { lat: 33.8034, lng: -84.3963 };
-//     var location = { lat: 41.716667, lng: 44.783333 };
-//     var map;
-//     var georgia = new google.maps.LatLng(41.716667, 44.783333);
-
-//     var stylez = [
-//         {
-//             featureType: "all",
-//             elementType: "all",
-//             stylers: [{ saturation: -100 }],
-//         },
-//     ];
-
-//     var mapOptions = {
-//         zoom: 8,
-//         center: georgia,
-//         mapTypeControlOptions: {
-//             mapTypeIds: [google.maps.MapTypeId.ROADMAP, "tehgrayz"],
-//         },
-//         mapId: "4504f8b37365c3d0",
-//     };
-
-//     map = new google.maps.Map(document.getElementById("map"), mapOptions);
-//     const locationTag = document.createElement("div");
-
-//     locationTag.className = "location-tag";
-//     locationTag.textContent = "Georgia";
-
-//     const markerView = new google.maps.marker.AdvancedMarkerView({
-//         map,
-//         position: location,
-//         content: locationTag,
-//     });
-//     var mapType = new google.maps.StyledMapType(stylez, { name: "Grayscale" });
-//     map.mapTypes.set("tehgrayz", mapType);
-//     map.setMapTypeId("tehgrayz");
-// }

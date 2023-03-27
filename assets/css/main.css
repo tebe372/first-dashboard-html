@@ -14,7 +14,10 @@
     font-family: "Raleway-SemiBold";
     src: url("../fonts/Raleway-SemiBold.ttf") format("truetype");
 }
-
+@font-face {
+    font-family: "Raleway-Light";
+    src: url("../fonts/Raleway-Light.ttf") format("truetype");
+}
 html {
     scroll-behavior: smooth;
 }
@@ -252,7 +255,7 @@ p {
     transition: all 0.3s ease-out 0s;
     margin-left: 130px;
     min-height: 100vh;
-    padding-bottom: 85px;
+    padding-bottom: 50px;
     position: relative;
     background: #fbfbfb;
 }
@@ -278,7 +281,7 @@ p {
 
 /* ========== content css ========== */
 .content {
-    padding: 24px 75px;
+    padding: 24px 75px 0 75px;
 }
 
 @media (max-width: 1199px) {
@@ -713,6 +716,8 @@ p {
     color: #ffffff;
     font-size: 12px;
     font-family: "Raleway-Medium", sans-serif;
+    top: -50%;
+    left: -50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -792,6 +797,7 @@ p {
     margin-left: 3px;
     margin-right: 3px;
 }
+/* ========== bar chart css ========== */
 
 .bar-container {
     position: relative;
@@ -825,7 +831,7 @@ p {
 .bar-pagination a:active {
     color: #1a71f3;
 }
-
+/* ========== card style 2 css ========== */
 .card-style-2 {
     background: #fff;
     box-sizing: border-box;
@@ -844,7 +850,7 @@ p {
     color: black;
     /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
-
+/* ========== table css ========== */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -852,18 +858,32 @@ table {
     color: #878787;
 }
 
-th,
 td {
     border-bottom: 1px solid #f0f0f0;
     padding: 10px 0;
-    width: 33.33%;
 }
+
+tbody tr td {
+    font-family: "Raleway-SemiBold", sans-serif;
+    font-size: 12px;
+}
+
+th {
+    padding: 0 0;
+    padding-top: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
 tr:last-child td {
     border-bottom: none;
 }
 td.left {
     text-align: left;
     font-family: "Raleway", sans-serif;
+    width: 33.33%;
 }
 
 td.center {
@@ -871,6 +891,7 @@ td.center {
     font-family: "Raleway-SemiBold", sans-serif;
     font-feature-settings: "pnum" on, "lnum" on;
     padding-right: 30px;
+    width: 33.33%;
 }
 
 td.right {
@@ -878,4 +899,121 @@ td.right {
     font-family: "Raleway-SemiBold", sans-serif;
     color: #1a71f3;
     font-feature-settings: "pnum" on, "lnum" on;
+    width: 33.33%;
+}
+
+.t-name {
+    font-family: "Raleway-Regular", sans-serif;
+    width: 25%;
+    text-align: left;
+}
+
+.t-income {
+    width: 10%;
+    text-align: center;
+    font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.t-income-q {
+    width: 17%;
+    text-align: center;
+}
+
+.t-cost {
+    width: 10%;
+    text-align: center;
+    font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.t-cost-q {
+    width: 16.5%;
+    text-align: center;
+}
+
+.t-result {
+    width: 10%;
+    text-align: center;
+    font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.t-result-q {
+    width: 16.5%;
+    text-align: right;
+}
+
+tbody td {
+    line-height: 14px;
+    padding-top: 22px;
+    padding-bottom: 18px;
+}
+
+tbody tr:first-child td {
+    padding-top: 15px;
+}
+
+td.t-income-q {
+    padding: 10px 0 !important;
+}
+
+.t-income-chart {
+    display: inline-block;
+    width: 60%;
+    height: 35px;
+}
+
+td.t-cost-q {
+    padding: 10px 0 !important;
+}
+
+.t-cost-chart {
+    display: inline-block;
+    width: 60%;
+    height: 35px;
+}
+
+td.t-result-q {
+    padding: 10px 0 !important;
+}
+
+.t-result-chart {
+    display: inline-block;
+    width: 75%;
+    height: 35px;
+}
+
+/* ========== time section css ========== */
+
+.time-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fbfbfb;
+    padding: 8px 0;
+    margin-top: 12px;
+    border-radius: 8px;
+}
+.time-container .time {
+    font-family: "Raleway-Light", sans-serif;
+    font-weight: 300;
+    font-size: 64px;
+    color: #464646;
+    line-height: 75px;
+    font-feature-settings: "pnum" on, "lnum" on;
+    text-transform: uppercase;
+    margin-right: 24px;
+}
+
+.time-container .arrow {
+    width: 36px;
+    height: 36px;
+}
+
+.time-container .arrow img {
+    width: 9px;
+    height: 9px;
+}
+.time-container .percent {
+    font-family: "Raleway-SemiBold", sans-serif;
+    font-size: 14px;
+    margin-left: 8px;
 }
