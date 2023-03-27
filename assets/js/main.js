@@ -395,7 +395,7 @@ Highcharts.chart("line-container", {
                     x1: 0,
                     y1: 0,
                     x2: 0,
-                    y2: 1,
+                    y2: 0.5,
                 },
                 stops: [
                     [0, "#1A71F310"],
@@ -420,7 +420,7 @@ Highcharts.chart("line-container", {
                     x1: 0,
                     y1: 0,
                     x2: 0,
-                    y2: 1,
+                    y2: 0.5,
                 },
                 stops: [
                     [0, "#EF476F10"],
@@ -440,7 +440,7 @@ Highcharts.chart("line-container", {
                     x1: 0,
                     y1: 0,
                     x2: 0,
-                    y2: 1,
+                    y2: 0.5,
                 },
                 stops: [
                     [0, "#06D6A010"],
