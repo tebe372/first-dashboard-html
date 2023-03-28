@@ -290,6 +290,8 @@ const barSalesOption = {
         },
         startOnTick: false,
         min: 1,
+        gridLineWidth: 1,
+        //gridZIndex: 4,
     },
     legend: {
         enabled: false,
@@ -305,7 +307,7 @@ const barSalesOption = {
     },
     plotOptions: {
         series: {
-            color: "#EEF3FA",
+            color: "#E0ECFD80",
             borderRadius: 13,
             pointWidth: 26,
             states: {

@@ -9,8 +9,6 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
     </head>
     <body onload="initMap()">
         <!-- ======== sidebar-nav start =========== -->
@@ -135,15 +133,13 @@
                 <div>
                     <!-- ========== header card start ========== -->
                     <div class="row">
-                        <div
-                            class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12"
-                        >
+                        <div class="col-xxl-3 col-xl-6 col-sm-12">
                             <div
                                 class="headercard"
                                 style="background-color: #097092"
                             >
-                                <div class="outer_circle"></div>
-                                <div class="inner_circle"></div>
+                                <div class="outer-circle"></div>
+                                <div class="inner-circle"></div>
                                 <div class="gr-blue"></div>
                                 <div
                                     class="icon d-flex justify-content-center align-items-center"
@@ -169,15 +165,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12"
-                        >
+                        <div class="col-xxl-3 col-xl-6 col-sm-12">
                             <div
                                 class="headercard"
                                 style="background-color: #05a47b"
                             >
-                                <div class="outer_circle"></div>
-                                <div class="inner_circle"></div>
+                                <div class="outer-circle"></div>
+                                <div class="inner-circle"></div>
                                 <div class="gr-green"></div>
                                 <div
                                     class="icon d-flex justify-content-center align-items-center"
@@ -203,15 +197,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12"
-                        >
+                        <div class="col-xxl-3 col-xl-6 col-sm-12">
                             <div
                                 class="headercard"
                                 style="background-color: #e5aa21"
                             >
-                                <div class="outer_circle"></div>
-                                <div class="inner_circle"></div>
+                                <div class="outer-circle"></div>
+                                <div class="inner-circle"></div>
                                 <div class="gr-yellow"></div>
                                 <div
                                     class="icon d-flex justify-content-center align-items-center"
@@ -235,15 +227,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-12"
-                        >
+                        <div class="col-xxl-3 col-xl-6 col-sm-12">
                             <div
                                 class="headercard"
                                 style="background-color: #c71842"
                             >
-                                <div class="outer_circle"></div>
-                                <div class="inner_circle"></div>
+                                <div class="outer-circle"></div>
+                                <div class="inner-circle"></div>
                                 <div class="gr-red"></div>
                                 <div
                                     class="icon d-flex justify-content-center align-items-center"
@@ -274,7 +264,7 @@
                     <div class="sankey-chart d-flex flex-row">
                         <!-- ========== sankey chart left part begin ========== -->
                         <div class="sankey-left">
-                            <div class="node">
+                            <div class="sankey-input-node">
                                 <div
                                     class="square"
                                     style="
@@ -291,7 +281,7 @@
                                     alt="Sankey left part arrow"
                                 />
                             </div>
-                            <div class="node">
+                            <div class="sankey-input-node">
                                 <div
                                     class="square"
                                     style="
@@ -308,7 +298,7 @@
                                     alt="Sankey left part arrow"
                                 />
                             </div>
-                            <div class="node">
+                            <div class="sankey-input-node">
                                 <div
                                     class="square"
                                     style="
@@ -325,7 +315,7 @@
                                     alt="Sankey left part arrow"
                                 />
                             </div>
-                            <div class="node">
+                            <div class="sankey-input-node">
                                 <div
                                     class="square"
                                     style="
@@ -348,11 +338,11 @@
 
                         <div class="sankey-right d-flex flex-row">
                             <div
-                                class="sankey-node_wrapper d-flex flex-col w-100"
+                                class="sankey-node-wrapper d-flex flex-col w-100"
                                 style="height: 228px"
                             >
                                 <div
-                                    class="sankey-node sankey-node_first d-flex flex-row w-100 justify-content-center align-items-center"
+                                    class="sankey-node sankey-node-first d-flex flex-row w-100 justify-content-center align-items-center"
                                 >
                                     <div class="label">
                                         <span class="text-center">
@@ -409,7 +399,7 @@
                                 </div>
                             </div>
                             <div
-                                class="sankey-node_wrapper d-flex flex-col w-100"
+                                class="sankey-node-wrapper d-flex flex-col w-100"
                                 style="height: 176px"
                             >
                                 <div
@@ -471,7 +461,7 @@
                                 </div>
                             </div>
                             <div
-                                class="sankey-node_wrapper d-flex flex-col w-100"
+                                class="sankey-node-wrapper d-flex flex-col w-100"
                                 style="height: 124px"
                             >
                                 <div
@@ -533,7 +523,7 @@
                                 </div>
                             </div>
                             <div
-                                class="sankey-node_wrapper d-flex flex-col w-100"
+                                class="sankey-node-wrapper d-flex flex-col w-100"
                                 style="height: 73px"
                             >
                                 <div
@@ -595,11 +585,11 @@
                                 </div>
                             </div>
                             <div
-                                class="sankey-node_wrapper d-flex flex-col w-100"
+                                class="sankey-node-wrapper d-flex flex-col w-100"
                                 style="height: 52px"
                             >
                                 <div
-                                    class="sankey-node sankey-node_last d-flex flex-row w-100 justify-content-center align-items-center"
+                                    class="sankey-node sankey-node-last d-flex flex-row w-100 justify-content-center align-items-center"
                                 >
                                     <div class="label">
                                         <span class="text-center">
@@ -616,28 +606,21 @@
 
                     <!-- ========== Three charts part begin ========== -->
                     <div class="row m-0 justify-content-between">
-                        <div class="row m-0 two_charts_container mb-36">
+                        <div class="row m-0 two-charts-container mb-36">
                             <div>
                                 <figure class="highcharts-figure">
                                     <div id="pie-container"></div>
                                 </figure>
                             </div>
                             <div>
-                                <div id="bar-sales-container"></div>
+                                <div
+                                    class="bar-sales-container"
+                                    id="bar-sales-container"
+                                ></div>
                             </div>
                         </div>
                         <div class="map-container mb-36">
                             <span>BY COUNTY</span>
-                            <!-- <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1510492.2337217857!2d42.236620068934464!3d42.31735632761069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x4f907964122d4ac2!2sGeorgia!5e0!3m2!1sen!2shk!4v1679576690633!5m2!1sen!2shk"
-                                width="100%"
-                                height="90%"
-                                style="border: 0"
-                                frameborder="0"
-                                allowfullscreen
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe> -->
                             <div class="map" id="map"></div>
                         </div>
                     </div>
@@ -1139,15 +1122,18 @@
         </div>
     </body>
 
-    <!-- <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3WsIvzTCYUSVD5RojtqXwAOV8W-P8GPA&callback=initMap&libraries=marker&v=beta"
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3WsIvzTCYUSVD5RojtqXwAOV8W-P8GPA&libraries=marker&v=beta"
         async
         defer
-    ></script> -->
-    <script
+    ></script>
+    <!-- <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAMQmggI3xXmCvpwKk2K3cHxUmXtHJueU&callback=initMap&libraries=marker&v=beta"
         defer
-    ></script>
+    ></script> -->
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>

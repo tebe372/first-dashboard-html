@@ -1,27 +1,3 @@
-// function initMap() {
-//     //var location = { lat: 33.8034, lng: -84.3963 };
-//     var location = { lat: 41.716667, lng: 44.783333 };
-//     const map = new google.maps.Map(document.getElementById("map"), {
-//         center: location,
-//         zoom: 8,
-//         mapId: "4504f8b37365c3d0",
-//         disableDefaultUI: true,
-//     });
-//     const locationTag = document.createElement("div");
-
-//     locationTag.className = "location-tag";
-//     locationTag.textContent = "Georgia";
-
-//     const markerView = new google.maps.marker.AdvancedMarkerView({
-//         map,
-//         position: location,
-//         content: locationTag,
-//     });
-// }
-// window.addEventListener("resize", function () {
-//     google.maps.event.trigger(map, "resize");
-// });
-
 function initMap() {
     var markers = [
         {
@@ -62,8 +38,6 @@ function initMap() {
         mapTypeControlOptions: {
             mapTypeIds: [google.maps.MapTypeId.ROADMAP, "tehgrayz"],
         },
-        // mapId: "4504f8b37365c3d0",
-        // mapId: "4504f8b37365c3d0",
     };
 
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -72,16 +46,6 @@ function initMap() {
     locationTag.className = "location-tag";
     locationTag.textContent = "Georgia";
 
-    // const markerView = new google.maps.marker.AdvancedMarkerView({
-    //     map,
-    //     position: location,
-    //     content: locationTag,
-    // });
-    // var marker = new google.maps.Marker({
-    //     position: location,
-    //     map: map,
-    //     title: "San Francisco",
-    // });
     var mapType = new google.maps.StyledMapType(stylez, { name: "Grayscale" });
     map.mapTypes.set("tehgrayz", mapType);
     map.setMapTypeId("tehgrayz");
@@ -99,12 +63,10 @@ function initMap() {
     CustomOverlay.prototype.onAdd = function () {
         var div = document.createElement("div");
         div.className = "location-tag";
-        // div.textContent = "Georgia";
         div.innerHTML = this.label;
 
         this.getPanes().overlayImage.appendChild(div);
         this.div = div;
-        //  this.checkOverlaps();
     };
 
     CustomOverlay.prototype.draw = function () {
@@ -120,42 +82,6 @@ function initMap() {
         this.div = null;
     };
 
-    // CustomOverlay.prototype.checkOverlaps = function () {
-    //     var self = this;
-    //     var offset = 30;
-    //     var overlaps = true;
-
-    //     while (overlaps) {
-    //         overlaps = false;
-    //         console.log("Overlaps : ", overlaps);
-    //         for (var i = 0; i < self.overlays.length; i++) {
-    //             if (self.overlays[i] !== self) {
-    //                 var position = self.overlays[i].position;
-    //                 var point = self
-    //                     .getProjection()
-    //                     .fromLatLngToDivPixel(position);
-
-    //                 if (
-    //                     point &&
-    //                     Math.abs(point.x - parseInt(self.div.style.left)) <
-    //                         offset &&
-    //                     Math.abs(point.y - parseInt(self.div.style.top)) <
-    //                         offset
-    //                 ) {
-    //                     overlaps = true;
-    //                     self.position = new google.maps.LatLng(
-    //                         self.position.lat() + 0.0002,
-    //                         self.position.lng() + 0.0002
-    //                     );
-    //                     break;
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    //     self.draw();
-    // };
-
     var overlays = [];
     markers.map((item) => {
         var marker = new CustomOverlay(
@@ -167,5 +93,3 @@ function initMap() {
         overlays.push(marker);
     });
 }
-
-window.initMap = initMap;

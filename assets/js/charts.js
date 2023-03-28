@@ -72,7 +72,7 @@ const barOptions1 = {
     },
     series: [
         {
-            name: "Bar Data",
+            name: "Personal info",
             data: [
                 [Date.UTC(2023, 1, 5), 110],
                 [Date.UTC(2023, 1, 6), 80],
@@ -86,7 +86,7 @@ const barOptions1 = {
     },
     plotOptions: {
         series: {
-            color: "#EEF3FAD0",
+            color: "#E0ECFD80",
             borderRadius: 18,
             pointWidth: 36,
             states: {
@@ -176,7 +176,7 @@ const barOptions2 = {
     },
     series: [
         {
-            name: "Bar Data",
+            name: "App info",
             data: [
                 [Date.UTC(2023, 1, 5), 110],
                 [Date.UTC(2023, 1, 6), 80],
@@ -190,7 +190,7 @@ const barOptions2 = {
     },
     plotOptions: {
         series: {
-            color: "#EEF3FAB0",
+            color: "#E0ECFD80",
             borderRadius: 18,
             pointWidth: 36,
             states: {
@@ -280,7 +280,7 @@ const barOptions3 = {
     },
     series: [
         {
-            name: "Bar Data",
+            name: "Review",
             data: [
                 [Date.UTC(2023, 1, 5), 110],
                 [Date.UTC(2023, 1, 6), 80],
@@ -294,7 +294,7 @@ const barOptions3 = {
     },
     plotOptions: {
         series: {
-            color: "#EEF3FAB0",
+            color: "#E0ECFD80",
             borderRadius: 18,
             pointWidth: 36,
             states: {
@@ -384,7 +384,7 @@ const barOptions4 = {
     },
     series: [
         {
-            name: "Bar Data",
+            name: "Completed",
             data: [
                 [Date.UTC(2023, 1, 5), 110],
                 [Date.UTC(2023, 1, 6), 80],
@@ -398,7 +398,7 @@ const barOptions4 = {
     },
     plotOptions: {
         series: {
-            color: "#EEF3FAB0",
+            color: "#E0ECFD80",
             borderRadius: 18,
             pointWidth: 36,
             states: {
@@ -419,10 +419,7 @@ Highcharts.chart("bar-container2", barOptions2);
 Highcharts.chart("bar-container3", barOptions3);
 Highcharts.chart("bar-container4", barOptions4);
 
-// Highcharts.chart("t-income-chart", {});
-
 $(function () {
-    // Define your chart options
     var incomeChartOptions = {
         credits: {
             enabled: false,
@@ -458,7 +455,7 @@ $(function () {
         },
         series: [
             {
-                name: "Benchmark Conv Rate",
+                name: "Income per quarter",
                 fillColor: {
                     linearGradient: {
                         x1: 0,
@@ -473,6 +470,14 @@ $(function () {
                 },
                 data: [1, 2, 1, 2],
                 color: "#118AB2",
+                marker: {
+                    enabled: false,
+                    states: {
+                        hover: {
+                            enabled: false,
+                        },
+                    },
+                },
             },
         ],
         legend: { enabled: false },
@@ -512,7 +517,7 @@ $(function () {
         },
         series: [
             {
-                name: "Benchmark Conv Rate",
+                name: "Costs per quarter",
                 fillColor: {
                     linearGradient: {
                         x1: 0,
@@ -527,6 +532,14 @@ $(function () {
                 },
                 data: [1, 3, 2, 5, 4],
                 color: "#118AB2",
+                marker: {
+                    enabled: false,
+                    states: {
+                        hover: {
+                            enabled: false,
+                        },
+                    },
+                },
             },
         ],
         legend: { enabled: false },
@@ -575,23 +588,23 @@ $(function () {
         },
         series: [
             {
-                name: "Benchmark Conv Rate",
-
+                name: "Result per quarter",
                 data: [1, 3, -2, 2],
-
                 color: "#CEDFF9",
                 negativeColor: "#F9D7DF",
+                marker: {
+                    enabled: false,
+                    states: {
+                        hover: {
+                            enabled: false,
+                        },
+                    },
+                },
             },
         ],
         legend: { enabled: false },
     };
 
-    // Loop through each row in the table
-    // $("#conversion-rate-table tbody tr").each(function () {
-    //     var chartContainer = $("<div>").addClass("t-income-chart");
-    //     Highcharts.chart(chartContainer[0], chartOptions);
-    //     $(this).find(".t-income-q").append(chartContainer);
-    // });
     const incomeCharts = [
         "t-income-chart-1",
         "t-income-chart-2",

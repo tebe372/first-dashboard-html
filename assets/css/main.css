@@ -18,6 +18,7 @@
     font-family: "Raleway-Light";
     src: url("../fonts/Raleway-Light.ttf") format("truetype");
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -390,7 +391,7 @@ p {
     );
 }
 
-.content .headercard .outer_circle {
+.content .headercard .outer-circle {
     width: 354px;
     height: 354px;
     border-radius: 100%;
@@ -407,7 +408,7 @@ p {
     opacity: 0.4;
 }
 
-.content .headercard .inner_circle {
+.content .headercard .inner-circle {
     width: 216px;
     height: 216px;
     border-radius: 100%;
@@ -439,7 +440,7 @@ p {
     justify-content: space-between;
     align-items: center;
 }
-.sankey-chart .sankey-left .node {
+.sankey-chart .sankey-left .sankey-input-node {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -494,7 +495,7 @@ p {
     width: 82%;
 }
 
-.sankey-chart .sankey-node_wrapper {
+.sankey-chart .sankey-node-wrapper {
     position: relative;
     z-index: 1;
 }
@@ -503,11 +504,11 @@ p {
     background-color: #cedff9;
 }
 
-.sankey-chart .sankey-node_first {
+.sankey-chart .sankey-node-first {
     border-radius: 10px 0 0 10px;
 }
 
-.sankey-chart .sankey-node_last {
+.sankey-chart .sankey-node-last {
     border-radius: 0 10px 10px 0;
 }
 
@@ -582,7 +583,7 @@ p {
 
 /* ========== middle part css ========== */
 
-.two_charts_container {
+.two-charts-container {
     /* padding: 53px 0 40 0; */
     width: 65%;
     display: flex;
@@ -592,29 +593,29 @@ p {
 }
 
 @media (max-width: 1060px) {
-    .two_charts_container {
+    .two-charts-container {
         width: 100% !important;
     }
 }
-.two_charts_container > div:first-child {
+.two-charts-container > div:first-child {
     width: 55% !important;
 }
 @media (min-width: 1600px) {
-    .two_charts_container > div:first-child {
+    .two-charts-container > div:first-child {
         padding-left: 20px;
         padding-right: 80px;
     }
 }
 
-.two_charts_container > div:last-child {
+.two-charts-container > div:last-child {
     width: 45% !important;
     margin-top: 5px;
     padding-left: 50px;
     padding-right: 35px;
 }
 @media (max-width: 768px) {
-    .two_charts_container > div:first-child,
-    .two_charts_container > div:last-child {
+    .two-charts-container > div:first-child,
+    .two-charts-container > div:last-child {
         width: 100% !important;
         padding-left: 50px;
         padding-right: 50px;
@@ -668,12 +669,9 @@ p {
     background: #f1f7ff;
 }
 
-#bar-sales-container {
+.bar-sales-container {
     margin-top: 20px;
     height: 193px;
-    /* margin-left: 50px;
-    margin-top: 23px;
-    margin-right: 40px; */
 }
 
 /* ========== map css ========== */
@@ -702,10 +700,6 @@ p {
     border-radius: 5px;
     width: 100%;
     height: 160px;
-    /*
-    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); Firefox 10+
-     filter: gray; 
-    -webkit-filter: grayscale(99%);*/
 }
 
 .location-tag {
@@ -737,6 +731,7 @@ p {
     width: 66px;
     height: 31px;
     z-index: -1;
+    /* color: #4593ff48; */
 }
 
 /* ========== line chart css ========== */
@@ -748,7 +743,7 @@ p {
     border-radius: 8px;
 }
 
-#line-container {
+.line-container {
     padding: 10px 43.5px 17px 24px;
 }
 .line-pagination {
@@ -760,7 +755,6 @@ p {
     margin-top: 24px;
 }
 
-/* pagination styling */
 .line-pagination a {
     font-family: "Raleway", sans-serif;
     color: #b5b5b5;
