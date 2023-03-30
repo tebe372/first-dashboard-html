@@ -28,7 +28,10 @@ function initMap() {
         {
             featureType: "all",
             elementType: "all",
-            stylers: [{ saturation: -100 }],
+            stylers: [
+                { saturation: -100 },
+                { lightness: getStyleVar("--map-lightness") },
+            ],
         },
     ];
 
