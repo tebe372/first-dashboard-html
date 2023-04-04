@@ -1,410 +1,410 @@
-const barOptions1 = {
-    credits: {
-        enabled: false,
-    },
-    chart: {
-        type: "column",
-        spacing: [0, 0, 0, 0],
-        marginTop: 40,
-        backgroundColor: getStyleVar("--card-back-color"),
-    },
-    title: {
-        text: "Personal Info",
-        style: {
-            fontFamily: "Raleway-ExtraBold, sans-serif",
-            fontSize: "11px",
-            color: getStyleVar("--chart-label-color-1"),
+function initCharts2() {
+    const barOptions1 = {
+        credits: {
+            enabled: false,
         },
-        align: "left",
-        widthAdjust: 10,
-    },
-    xAxis: {
-        type: "datetime",
-
-        labels: {
-            style: {
-                color: "#B5B5B5",
-                fontSize: "10px",
-                fontFamily: "Raleway-Regular, sans-serif",
-            },
-
-            formatter: function () {
-                var weekdays = ["Su", "Mo", "Tu", "Wed", "Th", "Fr", "Sa"];
-                const d = new Date(this.value);
-                return weekdays[d.getDay()];
-            },
+        chart: {
+            type: "column",
+            spacing: [0, 0, 0, 0],
+            marginTop: 40,
+            backgroundColor: getStyleVar("--card-back-color"),
         },
-        lineWidth: 0,
-        gridLineWidth: 1,
-        gridLineColor: getStyleVar("--chart-grid-line-color"),
-        tickInterval: 1000 * 3600 * 24,
-        tickWidth: 0,
-    },
-    yAxis: {
         title: {
-            text: null,
-        },
-
-        labels: {
+            text: "Personal Info",
             style: {
-                color: "#B5B5B5",
-                fontSize: "10px",
-                fontFamily: "Raleway-Regular, sans-serif",
-                fontVariantNumeric: "normal",
+                fontFamily: "Raleway-ExtraBold, sans-serif",
+                fontSize: "11px",
+                color: getStyleVar("--chart-label-color-1"),
             },
-            align: "center",
-            x: -10,
+            align: "left",
+            widthAdjust: 10,
         },
-        startOnTick: false,
-        lineWidth: 0,
-        tickWidth: 0,
-        gridLineWidth: 0,
-        tickInterval: 30,
-        min: -1,
-        // min: 1,
-    },
-    legend: {
-        enabled: false,
-    },
-    series: [
-        {
-            name: "Personal info",
-            data: [
-                [Date.UTC(2023, 1, 5), 110],
-                [Date.UTC(2023, 1, 6), 80],
-                [Date.UTC(2023, 1, 7), 90],
-                [Date.UTC(2023, 1, 8), 60],
-            ],
-        },
-    ],
-    tooltip: {
-        enabled: false,
-    },
-    plotOptions: {
-        series: {
-            color: getStyleVar("--chart-bar-back-color"),
-            borderRadius: 18,
-            pointWidth: 36,
-            states: {
-                hover: {
-                    color: "#1A71F3",
+        xAxis: {
+            type: "datetime",
+
+            labels: {
+                style: {
+                    color: "#B5B5B5",
+                    fontSize: "10px",
+                    fontFamily: "Raleway-Regular, sans-serif",
+                },
+
+                formatter: function () {
+                    var weekdays = ["Su", "Mo", "Tu", "Wed", "Th", "Fr", "Sa"];
+                    const d = new Date(this.value);
+                    return weekdays[d.getDay()];
                 },
             },
-            point: {
-                events: {
-                    click: function (event) {},
+            lineWidth: 0,
+            gridLineWidth: 1,
+            gridLineColor: getStyleVar("--chart-grid-line-color"),
+            tickInterval: 1000 * 3600 * 24,
+            tickWidth: 0,
+        },
+        yAxis: {
+            title: {
+                text: null,
+            },
+
+            labels: {
+                style: {
+                    color: "#B5B5B5",
+                    fontSize: "10px",
+                    fontFamily: "Raleway-Regular, sans-serif",
+                    fontVariantNumeric: "normal",
                 },
+                align: "center",
+                x: -10,
             },
-            borderWidth: 0,
+            startOnTick: false,
+            lineWidth: 0,
+            tickWidth: 0,
+            gridLineWidth: 0,
+            tickInterval: 30,
+            min: -1,
+            // min: 1,
         },
-    },
-};
-const barOptions2 = {
-    credits: {
-        enabled: false,
-    },
-    chart: {
-        type: "column",
-        spacing: [0, 0, 0, 0],
-        marginTop: 40,
-        backgroundColor: getStyleVar("--card-back-color"),
-    },
-    title: {
-        text: "App Info",
-        style: {
-            fontFamily: "Raleway-ExtraBold, sans-serif",
-            fontSize: "11px",
-            color: getStyleVar("--chart-label-color-1"),
+        legend: {
+            enabled: false,
         },
-        align: "left",
-        widthAdjust: 10,
-    },
-    xAxis: {
-        type: "datetime",
-
-        labels: {
-            style: {
-                color: "#B5B5B5",
-                fontSize: "10px",
-                fontFamily: "Raleway-Regular, sans-serif",
+        series: [
+            {
+                name: "Personal info",
+                data: [
+                    [Date.UTC(2023, 1, 5), 110],
+                    [Date.UTC(2023, 1, 6), 80],
+                    [Date.UTC(2023, 1, 7), 90],
+                    [Date.UTC(2023, 1, 8), 60],
+                ],
             },
-
-            formatter: function () {
-                var weekdays = ["Su", "Mo", "Tu", "Wed", "Th", "Fr", "Sa"];
-                const d = new Date(this.value);
-                return weekdays[d.getDay()];
+        ],
+        tooltip: {
+            enabled: false,
+        },
+        plotOptions: {
+            series: {
+                color: getStyleVar("--chart-bar-back-color"),
+                borderRadius: 18,
+                pointWidth: 36,
+                states: {
+                    hover: {
+                        color: "#1A71F3",
+                    },
+                },
+                point: {
+                    events: {
+                        click: function (event) {},
+                    },
+                },
+                borderWidth: 0,
             },
         },
-        lineWidth: 0,
-        gridLineWidth: 1,
-        gridLineColor: getStyleVar("--chart-grid-line-color"),
-        tickInterval: 1000 * 3600 * 24,
-        tickWidth: 0,
-    },
-    yAxis: {
+    };
+    const barOptions2 = {
+        credits: {
+            enabled: false,
+        },
+        chart: {
+            type: "column",
+            spacing: [0, 0, 0, 0],
+            marginTop: 40,
+            backgroundColor: getStyleVar("--card-back-color"),
+        },
         title: {
-            text: null,
-        },
-
-        labels: {
+            text: "App Info",
             style: {
-                color: "#B5B5B5",
-                fontSize: "10px",
-                fontFamily: "Raleway-Regular, sans-serif",
-                fontVariantNumeric: "normal",
+                fontFamily: "Raleway-ExtraBold, sans-serif",
+                fontSize: "11px",
+                color: getStyleVar("--chart-label-color-1"),
             },
-            align: "center",
-            x: -10,
+            align: "left",
+            widthAdjust: 10,
         },
-        startOnTick: false,
-        lineWidth: 0,
-        tickWidth: 0,
-        gridLineWidth: 0,
-        tickInterval: 30,
-        // min: 1,
-    },
-    legend: {
-        enabled: false,
-    },
-    series: [
-        {
-            name: "Personal info",
-            data: [
-                [Date.UTC(2023, 1, 5), 110],
-                [Date.UTC(2023, 1, 6), 80],
-                [Date.UTC(2023, 1, 7), 90],
-                [Date.UTC(2023, 1, 8), 60],
-            ],
-        },
-    ],
-    tooltip: {
-        enabled: false,
-    },
-    plotOptions: {
-        series: {
-            color: getStyleVar("--chart-bar-back-color"),
-            borderRadius: 18,
-            pointWidth: 36,
-            states: {
-                hover: {
-                    color: "#1A71F3",
+        xAxis: {
+            type: "datetime",
+
+            labels: {
+                style: {
+                    color: "#B5B5B5",
+                    fontSize: "10px",
+                    fontFamily: "Raleway-Regular, sans-serif",
+                },
+
+                formatter: function () {
+                    var weekdays = ["Su", "Mo", "Tu", "Wed", "Th", "Fr", "Sa"];
+                    const d = new Date(this.value);
+                    return weekdays[d.getDay()];
                 },
             },
-            point: {
-                events: {
-                    click: function (event) {},
+            lineWidth: 0,
+            gridLineWidth: 1,
+            gridLineColor: getStyleVar("--chart-grid-line-color"),
+            tickInterval: 1000 * 3600 * 24,
+            tickWidth: 0,
+        },
+        yAxis: {
+            title: {
+                text: null,
+            },
+
+            labels: {
+                style: {
+                    color: "#B5B5B5",
+                    fontSize: "10px",
+                    fontFamily: "Raleway-Regular, sans-serif",
+                    fontVariantNumeric: "normal",
                 },
+                align: "center",
+                x: -10,
             },
-            borderWidth: 0,
+            startOnTick: false,
+            lineWidth: 0,
+            tickWidth: 0,
+            gridLineWidth: 0,
+            tickInterval: 30,
+            // min: 1,
         },
-    },
-};
-const barOptions3 = {
-    credits: {
-        enabled: false,
-    },
-    chart: {
-        type: "column",
-        spacing: [0, 0, 0, 0],
-        marginTop: 40,
-        backgroundColor: getStyleVar("--card-back-color"),
-    },
-    title: {
-        text: "Review",
-        style: {
-            fontFamily: "Raleway-ExtraBold, sans-serif",
-            fontSize: "11px",
-            color: getStyleVar("--chart-label-color-1"),
+        legend: {
+            enabled: false,
         },
-        align: "left",
-        widthAdjust: 10,
-    },
-    xAxis: {
-        type: "datetime",
-
-        labels: {
-            style: {
-                color: "#B5B5B5",
-                fontSize: "10px",
-                fontFamily: "Raleway-Regular, sans-serif",
+        series: [
+            {
+                name: "Personal info",
+                data: [
+                    [Date.UTC(2023, 1, 5), 110],
+                    [Date.UTC(2023, 1, 6), 80],
+                    [Date.UTC(2023, 1, 7), 90],
+                    [Date.UTC(2023, 1, 8), 60],
+                ],
             },
-
-            formatter: function () {
-                var weekdays = ["Su", "Mo", "Tu", "Wed", "Th", "Fr", "Sa"];
-                const d = new Date(this.value);
-                return weekdays[d.getDay()];
+        ],
+        tooltip: {
+            enabled: false,
+        },
+        plotOptions: {
+            series: {
+                color: getStyleVar("--chart-bar-back-color"),
+                borderRadius: 18,
+                pointWidth: 36,
+                states: {
+                    hover: {
+                        color: "#1A71F3",
+                    },
+                },
+                point: {
+                    events: {
+                        click: function (event) {},
+                    },
+                },
+                borderWidth: 0,
             },
         },
-        lineWidth: 0,
-        gridLineWidth: 1,
-        gridLineColor: getStyleVar("--chart-grid-line-color"),
-        tickInterval: 1000 * 3600 * 24,
-        tickWidth: 0,
-    },
-    yAxis: {
+    };
+    const barOptions3 = {
+        credits: {
+            enabled: false,
+        },
+        chart: {
+            type: "column",
+            spacing: [0, 0, 0, 0],
+            marginTop: 40,
+            backgroundColor: getStyleVar("--card-back-color"),
+        },
         title: {
-            text: null,
-        },
-
-        labels: {
+            text: "Review",
             style: {
-                color: "#B5B5B5",
-                fontSize: "10px",
-                fontFamily: "Raleway-Regular, sans-serif",
-                fontVariantNumeric: "normal",
+                fontFamily: "Raleway-ExtraBold, sans-serif",
+                fontSize: "11px",
+                color: getStyleVar("--chart-label-color-1"),
             },
-            align: "center",
-            x: -10,
+            align: "left",
+            widthAdjust: 10,
         },
-        startOnTick: false,
-        lineWidth: 0,
-        tickWidth: 0,
-        gridLineWidth: 0,
-        tickInterval: 30,
-        // min: 1,
-    },
-    legend: {
-        enabled: false,
-    },
-    series: [
-        {
-            name: "Personal info",
-            data: [
-                [Date.UTC(2023, 1, 5), 110],
-                [Date.UTC(2023, 1, 6), 80],
-                [Date.UTC(2023, 1, 7), 90],
-                [Date.UTC(2023, 1, 8), 60],
-            ],
-        },
-    ],
-    tooltip: {
-        enabled: false,
-    },
-    plotOptions: {
-        series: {
-            color: getStyleVar("--chart-bar-back-color"),
-            borderRadius: 18,
-            pointWidth: 36,
-            states: {
-                hover: {
-                    color: "#1A71F3",
+        xAxis: {
+            type: "datetime",
+
+            labels: {
+                style: {
+                    color: "#B5B5B5",
+                    fontSize: "10px",
+                    fontFamily: "Raleway-Regular, sans-serif",
+                },
+
+                formatter: function () {
+                    var weekdays = ["Su", "Mo", "Tu", "Wed", "Th", "Fr", "Sa"];
+                    const d = new Date(this.value);
+                    return weekdays[d.getDay()];
                 },
             },
-            point: {
-                events: {
-                    click: function (event) {},
+            lineWidth: 0,
+            gridLineWidth: 1,
+            gridLineColor: getStyleVar("--chart-grid-line-color"),
+            tickInterval: 1000 * 3600 * 24,
+            tickWidth: 0,
+        },
+        yAxis: {
+            title: {
+                text: null,
+            },
+
+            labels: {
+                style: {
+                    color: "#B5B5B5",
+                    fontSize: "10px",
+                    fontFamily: "Raleway-Regular, sans-serif",
+                    fontVariantNumeric: "normal",
                 },
+                align: "center",
+                x: -10,
             },
-            borderWidth: 0,
+            startOnTick: false,
+            lineWidth: 0,
+            tickWidth: 0,
+            gridLineWidth: 0,
+            tickInterval: 30,
+            // min: 1,
         },
-    },
-};
-const barOptions4 = {
-    credits: {
-        enabled: false,
-    },
-    chart: {
-        type: "column",
-        spacing: [0, 0, 0, 0],
-        marginTop: 40,
-        backgroundColor: getStyleVar("--card-back-color"),
-    },
-    title: {
-        text: "Completed",
-        style: {
-            fontFamily: "Raleway-ExtraBold, sans-serif",
-            fontSize: "11px",
-            color: getStyleVar("--chart-label-color-1"),
+        legend: {
+            enabled: false,
         },
-        align: "left",
-        widthAdjust: 10,
-    },
-    xAxis: {
-        type: "datetime",
-
-        labels: {
-            style: {
-                color: "#B5B5B5",
-                fontSize: "10px",
-                fontFamily: "Raleway-Regular, sans-serif",
+        series: [
+            {
+                name: "Personal info",
+                data: [
+                    [Date.UTC(2023, 1, 5), 110],
+                    [Date.UTC(2023, 1, 6), 80],
+                    [Date.UTC(2023, 1, 7), 90],
+                    [Date.UTC(2023, 1, 8), 60],
+                ],
             },
-
-            formatter: function () {
-                var weekdays = ["Su", "Mo", "Tu", "Wed", "Th", "Fr", "Sa"];
-                const d = new Date(this.value);
-                return weekdays[d.getDay()];
+        ],
+        tooltip: {
+            enabled: false,
+        },
+        plotOptions: {
+            series: {
+                color: getStyleVar("--chart-bar-back-color"),
+                borderRadius: 18,
+                pointWidth: 36,
+                states: {
+                    hover: {
+                        color: "#1A71F3",
+                    },
+                },
+                point: {
+                    events: {
+                        click: function (event) {},
+                    },
+                },
+                borderWidth: 0,
             },
         },
-        lineWidth: 0,
-        gridLineWidth: 1,
-        gridLineColor: getStyleVar("--chart-grid-line-color"),
-        tickInterval: 1000 * 3600 * 24,
-        tickWidth: 0,
-    },
-    yAxis: {
+    };
+    const barOptions4 = {
+        credits: {
+            enabled: false,
+        },
+        chart: {
+            type: "column",
+            spacing: [0, 0, 0, 0],
+            marginTop: 40,
+            backgroundColor: getStyleVar("--card-back-color"),
+        },
         title: {
-            text: null,
-        },
-
-        labels: {
+            text: "Completed",
             style: {
-                color: "#B5B5B5",
-                fontSize: "10px",
-                fontFamily: "Raleway-Regular, sans-serif",
-                fontVariantNumeric: "normal",
+                fontFamily: "Raleway-ExtraBold, sans-serif",
+                fontSize: "11px",
+                color: getStyleVar("--chart-label-color-1"),
             },
-            align: "center",
-            x: -10,
+            align: "left",
+            widthAdjust: 10,
         },
-        startOnTick: false,
-        lineWidth: 0,
-        tickWidth: 0,
-        gridLineWidth: 0,
-        tickInterval: 30,
-        // min: 1,
-    },
-    legend: {
-        enabled: false,
-    },
-    series: [
-        {
-            name: "Personal info",
-            data: [
-                [Date.UTC(2023, 1, 5), 110],
-                [Date.UTC(2023, 1, 6), 80],
-                [Date.UTC(2023, 1, 7), 90],
-                [Date.UTC(2023, 1, 8), 60],
-            ],
-        },
-    ],
-    tooltip: {
-        enabled: false,
-    },
-    plotOptions: {
-        series: {
-            color: getStyleVar("--chart-bar-back-color"),
-            borderRadius: 18,
-            pointWidth: 36,
-            states: {
-                hover: {
-                    color: "#1A71F3",
-                },
-            },
-            point: {
-                events: {
-                    click: function (event) {},
-                },
-            },
-            borderWidth: 0,
-        },
-    },
-};
-Highcharts.chart("bar-container1", barOptions1);
-Highcharts.chart("bar-container2", barOptions2);
-Highcharts.chart("bar-container3", barOptions3);
-Highcharts.chart("bar-container4", barOptions4);
+        xAxis: {
+            type: "datetime",
 
-$(function () {
+            labels: {
+                style: {
+                    color: "#B5B5B5",
+                    fontSize: "10px",
+                    fontFamily: "Raleway-Regular, sans-serif",
+                },
+
+                formatter: function () {
+                    var weekdays = ["Su", "Mo", "Tu", "Wed", "Th", "Fr", "Sa"];
+                    const d = new Date(this.value);
+                    return weekdays[d.getDay()];
+                },
+            },
+            lineWidth: 0,
+            gridLineWidth: 1,
+            gridLineColor: getStyleVar("--chart-grid-line-color"),
+            tickInterval: 1000 * 3600 * 24,
+            tickWidth: 0,
+        },
+        yAxis: {
+            title: {
+                text: null,
+            },
+
+            labels: {
+                style: {
+                    color: "#B5B5B5",
+                    fontSize: "10px",
+                    fontFamily: "Raleway-Regular, sans-serif",
+                    fontVariantNumeric: "normal",
+                },
+                align: "center",
+                x: -10,
+            },
+            startOnTick: false,
+            lineWidth: 0,
+            tickWidth: 0,
+            gridLineWidth: 0,
+            tickInterval: 30,
+            // min: 1,
+        },
+        legend: {
+            enabled: false,
+        },
+        series: [
+            {
+                name: "Personal info",
+                data: [
+                    [Date.UTC(2023, 1, 5), 110],
+                    [Date.UTC(2023, 1, 6), 80],
+                    [Date.UTC(2023, 1, 7), 90],
+                    [Date.UTC(2023, 1, 8), 60],
+                ],
+            },
+        ],
+        tooltip: {
+            enabled: false,
+        },
+        plotOptions: {
+            series: {
+                color: getStyleVar("--chart-bar-back-color"),
+                borderRadius: 18,
+                pointWidth: 36,
+                states: {
+                    hover: {
+                        color: "#1A71F3",
+                    },
+                },
+                point: {
+                    events: {
+                        click: function (event) {},
+                    },
+                },
+                borderWidth: 0,
+            },
+        },
+    };
+    Highcharts.chart("bar-container1", barOptions1);
+    Highcharts.chart("bar-container2", barOptions2);
+    Highcharts.chart("bar-container3", barOptions3);
+    Highcharts.chart("bar-container4", barOptions4);
+
     var incomeChartOptions = {
         credits: {
             enabled: false,
@@ -627,4 +627,4 @@ $(function () {
     resultharts.map((item) => {
         Highcharts.chart(item, resultChartOptions);
     });
-});
+}

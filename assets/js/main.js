@@ -536,19 +536,3 @@ function initCharts() {
         },
     });
 }
-
-initCharts();
-
-// const toggleSwitch = document.querySelector("#toggle-switch");
-// const body = document.querySelector("body");
-
-// toggleSwitch.addEventListener("change", function (e) {
-//     if (e.target.checked) {
-//         body.classList.remove("light-mode");
-//         body.classList.add("dark-mode");
-//     } else {
-//         body.classList.remove("dark-mode");
-//         body.classList.add("light-mode");
-//     }
-//     initCharts();
-// });
