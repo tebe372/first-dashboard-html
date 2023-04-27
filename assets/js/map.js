@@ -22,7 +22,7 @@ function initMap() {
         },
     ];
     var map;
-    var georgia = new google.maps.LatLng(41.716667, 44.783333);
+    var georgia = new google.maps.LatLng(44.3148, -85.6024);
 
     var stylez = [
         {
@@ -36,7 +36,7 @@ function initMap() {
     ];
 
     var mapOptions = {
-        zoom: 6,
+        zoom: 8,
         center: georgia,
         mapTypeControlOptions: {
             mapTypeIds: [google.maps.MapTypeId.ROADMAP, "tehgrayz"],
