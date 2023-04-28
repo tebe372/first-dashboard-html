@@ -50,8 +50,8 @@ function initMap() {
     locationTag.textContent = "Georgia";
 
     var mapType = new google.maps.StyledMapType(stylez, { name: "Grayscale" });
-    map.mapTypes.set("tehgrayz", mapType);
-    map.setMapTypeId("tehgrayz");
+    // map.mapTypes.set("tehgrayz", mapType);
+    // map.setMapTypeId("tehgrayz");
 
     function CustomOverlay(position, label, map, overlays) {
         this.position = position;
