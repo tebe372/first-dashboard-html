@@ -32,18 +32,18 @@ function initCharts() {
             getStyleVar("--chart-pie-back-color-2"),
             getStyleVar("--chart-pie-back-color-3"),
         ],
-        pieCategories = ["North America", "Asia", "Europe"],
+        pieCategories = ["Consumer Loans", "Consumer Deposits", "Business Deposits"],
         pieLegendData = [
             {
-                name: "Asia",
+                name: "Consumer Deposits",
                 color: "#FFD166",
             },
             {
-                name: "North America",
+                name: "Consumer Loans",
                 color: "#118AB2",
             },
             {
-                name: "Europe",
+                name: "Business Deposits",
                 color: "#06D6A0",
             },
         ],
@@ -52,7 +52,7 @@ function initCharts() {
                 y: 33,
                 color: pieBackColors[0],
                 drilldown: {
-                    name: "North America",
+                    name: "Consumer Loans",
                     categories: ["A", "B", "C", "D"],
                     data: [
                         {
@@ -78,7 +78,7 @@ function initCharts() {
                 y: 34,
                 color: pieBackColors[1],
                 drilldown: {
-                    name: "Asia",
+                    name: "Consumer Deposits",
                     categories: ["E", "F", "G", "H"],
                     data: [
                         {
@@ -104,7 +104,7 @@ function initCharts() {
                 y: 34,
                 color: pieBackColors[2],
                 drilldown: {
-                    name: "Europe",
+                    name: "Business Deposits",
                     categories: ["I", "J", "K", "L", "M"],
                     data: [
                         {
@@ -202,7 +202,7 @@ function initCharts() {
 
         legend: {
             title: {
-                text: "CONTINENT NAME",
+                text: "PRODUCT CONVERSIONS",
                 style: {
                     fontFamily: "Raleway-ExtraBold, sans-serif",
                     fontSize: "11px",
